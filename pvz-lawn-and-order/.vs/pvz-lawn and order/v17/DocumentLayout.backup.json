@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\G$$$\\Documents\\pvz-lawn-and-order\\Plants-vs.-Zombies-Lawn-and-Order-Replanted-but-Good-\\pvz-lawn-and-order\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|c:\\users\\g$$$\\documents\\pvz-lawn-and-order\\plants-vs.-zombies-lawn-and-order-replanted-but-good-\\pvz-lawn-and-order\\plant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|solutionrelative:plant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|c:\\users\\g$$$\\documents\\pvz-lawn-and-order\\plants-vs.-zombies-lawn-and-order-replanted-but-good-\\pvz-lawn-and-order\\zombie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|solutionrelative:zombie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Zombie.cs",
+              "DocumentMoniker": "C:\\Users\\G$$$\\Documents\\pvz-lawn-and-order\\Plants-vs.-Zombies-Lawn-and-Order-Replanted-but-Good-\\pvz-lawn-and-order\\Zombie.cs",
+              "RelativeDocumentMoniker": "Zombie.cs",
+              "ToolTip": "C:\\Users\\G$$$\\Documents\\pvz-lawn-and-order\\Plants-vs.-Zombies-Lawn-and-Order-Replanted-but-Good-\\pvz-lawn-and-order\\Zombie.cs",
+              "RelativeToolTip": "Zombie.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T07:41:38.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Plant.cs",
+              "DocumentMoniker": "C:\\Users\\G$$$\\Documents\\pvz-lawn-and-order\\Plants-vs.-Zombies-Lawn-and-Order-Replanted-but-Good-\\pvz-lawn-and-order\\Plant.cs",
+              "RelativeDocumentMoniker": "Plant.cs",
+              "ToolTip": "C:\\Users\\G$$$\\Documents\\pvz-lawn-and-order\\Plants-vs.-Zombies-Lawn-and-Order-Replanted-but-Good-\\pvz-lawn-and-order\\Plant.cs",
+              "RelativeToolTip": "Plant.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T07:41:01.593Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
