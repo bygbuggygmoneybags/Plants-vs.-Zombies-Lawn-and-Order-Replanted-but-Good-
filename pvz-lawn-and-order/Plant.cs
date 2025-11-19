@@ -9,11 +9,36 @@ namespace pvzlawnandorder
 {
     public abstract class Plant
     {
-        private int health {  get; set; }
-        private string name { get; set; }
-        private int damage { get; set; }
-        private int cooldown { get; set; }
+        protected int Health {  get; set; }
+        protected string Name { get; set; }
+        protected int Damage { get; set; }
+        protected int Cooldown { get; set; }
+        protected float timer = 0f;
+        protected bool IsAlive => Health > 0;
+        protected bool CanAttack => timer >= Cooldown;
 
-        public abstract void Attack(int damage, int cooldown);
+        public void TakeDamage(int damage)
+        {
+            Health -= damage;
+            if (Health <= 0)
+            {
+                Die();
+            }
+        }
+
+        public void Update(int time)
+        {
+            timer += time;
+
+            if(CanAttack)
+            {
+                Attack();
+                timer = 0f;
+            }
+        }
+
+        protected abstract void Attack();
+        protected abstract void OnPlant();
+        protected abstract void Die();
     }
 }
