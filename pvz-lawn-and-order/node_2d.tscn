@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2m7gpofetpw5"]
+
+[ext_resource type="Script" uid="uid://bpnawfvmddc8l" path="res://Zombie.cs" id="1_0e48y"]
+[ext_resource type="Script" uid="uid://jrqm8kgfy5tq" path="res://Plant.cs" id="2_epypp"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_0e48y")
+
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource("2_epypp")

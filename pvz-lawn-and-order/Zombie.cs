@@ -4,13 +4,14 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Godot;
 
 namespace pvzlawnandorder
 {
-    public abstract class Zombie
+    public abstract partial class Zombie : Node2D
     {
         protected int Health {  get; set; }
-        protected string Name { get; set; }
+        protected string Type { get; set; }
         protected int Damage { get; set; }
         protected int Cooldown { get; set; }
         protected int Speed { get; set; }
@@ -20,11 +21,11 @@ namespace pvzlawnandorder
         protected Plant target;
         protected bool IsAttacking => target != null;
 
-        public void Update(int time)
+        public override void _Process(double time)
         {
             if (!IsAlive) return;
 
-            timer += time;
+            timer += (float)time;
             if (IsAttacking)
             {
                 if (CanAttack)
@@ -34,7 +35,7 @@ namespace pvzlawnandorder
                 }
             } else
             {
-                Walk(time);
+                Walk((float)time);
             }
         }
 
@@ -47,9 +48,17 @@ namespace pvzlawnandorder
             }
         }
 
-        public void Walk(int timeWalk)
+        public void Walk(float timeWalk)
         {
+            Position += new Vector2(-Speed * timeWalk, 0);
+        }
 
+        private void OnEnterPlantTile(Area2D area)
+        {
+            if(area.GetParent() is Plant plant)
+            {
+                StartTarget(plant);
+            }    
         }
 
         public void StartTarget(Plant plant)
