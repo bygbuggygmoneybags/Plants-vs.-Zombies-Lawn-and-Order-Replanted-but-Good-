@@ -13,8 +13,8 @@ namespace pvzlawnandorder
         protected int Health {  get; set; }
         protected string Type { get; set; }
         protected int Damage { get; set; }
-        protected int Cooldown { get; set; }
         protected Animation PlantAnimation { get; set; }
+        protected float Cooldown { get; set; }
         protected float timer = 0f;
         protected bool IsAlive => Health > 0;
         protected bool CanAttack => timer >= Cooldown;
