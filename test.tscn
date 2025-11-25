@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://w6cpqukif2i"]
+
+[ext_resource type="Script" uid="uid://5r4m5hc0i2qo" path="res://settings_button.gd" id="1_37kl0"]
+
+[node name="AccountMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Container" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_right = 353.0
+offset_bottom = 40.0
+script = ExtResource("1_37kl0")
+
+[node name="Accounts" type="Button" parent="Container"]
+layout_mode = 2
