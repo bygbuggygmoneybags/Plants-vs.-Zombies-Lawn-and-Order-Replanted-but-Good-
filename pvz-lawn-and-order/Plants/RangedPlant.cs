@@ -15,18 +15,18 @@ namespace pvzlawnandorder
 
             timer -= (float)delta;
 
-            if (timer <= Cooldown && zombieInLane){
+            if (timer <= Cooldown && ZombieInLane){
                 RangedAttack();
                 timer = Cooldown;
             }
         }
 
-        protected abstract short numProjectiles{get;}
-        protected abstract float spreadAngle{get;}
-        protected abstract float projectileSpeed{get;}
-        protected abstract int pierceCount{get;}
-        protected abstract bool ignoreObstacles{get;}
-        protected abstract bool zombieInLane{get;}
+        protected abstract short NumProjectiles{get;}
+        protected abstract float SpreadAngle{get;}
+        protected abstract float ProjectileSpeed{get;}
+        protected abstract int PierceCount{get;}
+        protected abstract bool IgnoreObstacles{get;}
+        protected abstract bool ZombieInLane{get;}
 
         protected abstract void RangedAttack(int numProjectiles, float spreadAngle, float speed, int piercingNum, bool ignoreObstacles, bool zombieInLane);
 
