@@ -1,14 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://b2m7gpofetpw5"]
+[gd_scene load_steps=3 format=4 uid="uid://b2m7gpofetpw5"]
 
-[ext_resource type="Script" uid="uid://bpnawfvmddc8l" path="res://Zombie.cs" id="1_0e48y"]
-[ext_resource type="Script" uid="uid://jrqm8kgfy5tq" path="res://Plant.cs" id="2_epypp"]
-[ext_resource type="Script" uid="uid://uk5qtdfgxbj7" path="res://GameManager.cs" id="3_epypp"]
+[ext_resource type="TileSet" uid="uid://dvlfip0npxjwp" path="res://TileSet.tres" id="1_0e48y"]
+[ext_resource type="Script" uid="uid://bxbuv8ana20gy" path="res://GenMechanics/Tiles.cs" id="2_epypp"]
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_0e48y")
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAABAAAAAAABAAAAAAACAAAAAAAAAAAAAAACAAEAAAABAAAAAAADAAEAAAAAAAAAAAADAAAAAAABAAAAAAAEAAAAAAAAAAAAAAAFAAAAAAABAAAAAAAGAAAAAAAAAAAAAAAHAAAAAAABAAAAAAAIAAAAAAAAAAAAAAAIAAIAAAAAAAAAAAAIAAMAAAABAAAAAAAIAAQAAAAAAAAAAAAHAAQAAAABAAAAAAAGAAQAAAAAAAAAAAAFAAQAAAABAAAAAAAEAAQAAAAAAAAAAAADAAQAAAABAAAAAAACAAQAAAAAAAAAAAABAAQAAAABAAAAAAAAAAQAAAAAAAAAAAAHAAIAAAABAAAAAAAGAAIAAAAAAAAAAAAFAAIAAAABAAAAAAAEAAIAAAAAAAAAAAACAAIAAAAAAAAAAAABAAIAAAABAAAAAAAAAAIAAAAAAAAAAAAAAAEAAAABAAAAAAABAAEAAAAAAAAAAAAEAAEAAAABAAAAAAAFAAEAAAAAAAAAAAAGAAEAAAABAAAAAAAHAAEAAAAAAAAAAAAIAAEAAAABAAAAAAAAAAMAAAABAAAAAAABAAMAAAAAAAAAAAACAAMAAAABAAAAAAADAAMAAAAAAAAAAAAEAAMAAAABAAAAAAAFAAMAAAAAAAAAAAAGAAMAAAABAAAAAAAHAAMAAAAAAAAAAAADAAIAAAABAAAAAAA=")
+tile_set = ExtResource("1_0e48y")
 script = ExtResource("2_epypp")
-
-[node name="Node" type="Node" parent="."]
-script = ExtResource("3_epypp")
