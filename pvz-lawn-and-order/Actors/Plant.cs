@@ -10,7 +10,7 @@ namespace pvzlawnandorder
 {
     public abstract partial class Plant : Node2D
     {
-        private AnimationPlayer animPlay;
+        protected AnimationPlayer animPlay;
         protected Vector2I Location { get; set; }
         protected GameManager Game { get; set; }
         protected int Health {  get; set; }
@@ -18,8 +18,11 @@ namespace pvzlawnandorder
         protected int SunCost { get; set; }
         protected string Type { get; set; }
         protected int Damage { get; set; }
+        protected int Lane { get; set; }
         protected Animation Spawn { get; set; }
         protected Animation Idle { get; set; }
+        protected Animation Death { get; set; }
+        protected Animation Attack { get; set; }
         protected float Cooldown { get; set; }
         protected float timer = 0f;
         protected bool IsAlive => Health > 0;
@@ -40,7 +43,6 @@ namespace pvzlawnandorder
 
             if (CanAttack)
             {
-                Attack();
                 timer = 0f;
             }
         }
@@ -62,8 +64,12 @@ namespace pvzlawnandorder
             animPlay.AnimationFinished += OnSpawnFinish;
             animPlay.Play("Spawn");
         }
-
-        protected abstract void Attack();
-        protected abstract void Die();
+        protected void Die()
+        {
+            if (IsAlive)
+            {
+                animPlay.Play("Death");
+                _ExitTree();
+            }
     }
 }

@@ -1,10 +1,11 @@
-public interface IPlantRangedAttacks{
-    void RangedAttack();
+public interface IPlantRangedAttacks
+{
+    void RangedAttack(int numProjectiles, float spreadAngle, float speed, int piercingNum, bool ignoreObstacles, bool zombieInLane);
 
-    short numProjectiles{get;}
-    float spreadAngle{get;}
-    float projectileSpeed{get;}
-    int pierceCount{get;}
-    bool ignoreObstacles{get;}
-    bool zombieInLane{get;}
+    short NumProjectiles{ get; set; }
+    float SpreadAngle{ get; set; }
+    float ProjectileSpeed{ get; set; }
+    int PierceCount{ get; set; }
+    bool IgnoreObstacles{ get; set; }
+    bool ZombieInLane{ get; set; }
 }

@@ -10,14 +10,23 @@ namespace pvzlawnandorder
 {
     public abstract partial class Zombie : Node2D
     {
+        protected AnimationPlayer animPlay;
+        protected Vector2I Location { get; set; }
+        protected GameManager Game { get; set; }
+        protected int MaxHealth { get; set; }
         protected int Health {  get; set; }
         protected string Type { get; set; }
         protected int Damage { get; set; }
         protected int Cooldown { get; set; }
         protected int Speed { get; set; }
         protected float timer = 0f;
+        public int Lane { get; set; }
         protected bool IsAlive => Health > 0;
         protected bool CanAttack => timer >= Cooldown;
+        protected Animation Spawn { get; set; }
+        protected Animation Idle { get; set; }
+        protected Animation Death { get; set; }
+        protected Animation AttackAnim { get; set; }
         protected Plant target;
         protected bool IsAttacking => target != null;
 
@@ -37,6 +46,16 @@ namespace pvzlawnandorder
             {
                 Walk((float)time);
             }
+        }
+
+        public override void _Ready()
+        {
+            Game.AddZombie(this);
+        }
+
+        public override void _ExitTree()
+        {
+            Game.RemoveZombie(this);
         }
 
         public void TakeDamage(int damage)
@@ -72,6 +91,13 @@ namespace pvzlawnandorder
         }
 
         protected abstract void Attack();
-        protected abstract void Die();
+        protected void Die()
+        {
+            if (IsAlive)
+            {
+                animPlay.Play("Death");
+                _ExitTree();
+            }
+        }
     }
 }
