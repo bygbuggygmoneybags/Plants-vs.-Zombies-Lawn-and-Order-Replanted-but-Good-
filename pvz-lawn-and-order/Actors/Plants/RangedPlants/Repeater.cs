@@ -1,14 +1,14 @@
 using Godot;
+using pvzlawnandorder.Actors;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using pvzlawnandorder.Actors;
 
 namespace pvzlawnandorder.Plants
 {
-    public partial class Peashooter : RangedPlant
+    public partial class Repeater : RangedPlant
     {
         public override short NumProjectiles { get; set; }
         public override float SpreadAngle { get; set; }
@@ -17,7 +17,7 @@ namespace pvzlawnandorder.Plants
         public override bool IgnoreObstacles { get; set; }
         public override bool ZombieInLane { get; set; }
 
-        [Export] public PackedScene PeaProj;
+        [Export] public PackedScene RePeaProj;
 
         public override void RangedAttack(int numProjectiles, float spreadAngle, float speed, int piercingNum, bool ignoreObstacles, bool zombieInLane)
         {
@@ -25,11 +25,11 @@ namespace pvzlawnandorder.Plants
             {
                 for (int i = 0; i < numProjectiles; i++)
                 {
-                    Node2D pea = PeaProj.Instantiate<Node2D>();
+                    Node2D rePea = RePeaProj.Instantiate<Node2D>();
 
-                    pea.GlobalPosition = Location;
+                    rePea.GlobalPosition = Location;
 
-                    if (pea is Projectiles projectile)
+                    if (rePea is Projectiles projectile)
                     {
                         projectile.Speed = speed;
                         projectile.PierceCount = piercingNum;
@@ -37,7 +37,7 @@ namespace pvzlawnandorder.Plants
                         projectile.Direction = Vector2.Right;
                     }
 
-                    GetTree().CurrentScene.AddChild(pea);
+                    GetTree().CurrentScene.AddChild(rePea);
                 }
 
                 animPlay?.Play("Attack");
@@ -46,9 +46,14 @@ namespace pvzlawnandorder.Plants
 
         public override void _Ready()
         {
-            NumProjectiles = 1;
+            MaxHealth = 300;
+            Health = MaxHealth;
+            Damage = 20;
+            SunCost = 200;
+            Type = "Repeater";
+            NumProjectiles = 2;
             SpreadAngle = 0;
-            ProjectileSpeed = 15f;
+            ProjectileSpeed = 30f;
             PierceCount = 0;
             IgnoreObstacles = false;
         }

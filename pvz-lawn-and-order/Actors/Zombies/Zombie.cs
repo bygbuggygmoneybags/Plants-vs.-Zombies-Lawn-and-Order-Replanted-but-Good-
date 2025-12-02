@@ -93,11 +93,8 @@ namespace pvzlawnandorder
         protected abstract void Attack();
         protected void Die()
         {
-            if (IsAlive)
-            {
                 animPlay.Play("Death");
-                _ExitTree();
-            }
+                QueueFree();
         }
     }
 }

@@ -3,40 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\G$$$\\Documents\\pvz-lawn-and-order\\Plants-vs.-Zombies-Lawn-and-Order-Replanted-but-Good-\\pvz-lawn-and-order\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|c:\\users\\g$$$\\documents\\pvz-lawn-and-order\\plants-vs.-zombies-lawn-and-order-replanted-but-good-\\pvz-lawn-and-order\\genmechanics\\planttiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|solutionrelative:genmechanics\\planttiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|c:\\users\\g$$$\\documents\\pvz-lawn-and-order\\plants-vs.-zombies-lawn-and-order-replanted-but-good-\\pvz-lawn-and-order\\actors\\plants\\plant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|solutionrelative:actors\\plants\\plant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|c:\\users\\g$$$\\documents\\pvz-lawn-and-order\\plants-vs.-zombies-lawn-and-order-replanted-but-good-\\pvz-lawn-and-order\\genmechanics\\tiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|solutionrelative:genmechanics\\tiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|c:\\users\\g$$$\\documents\\pvz-lawn-and-order\\plants-vs.-zombies-lawn-and-order-replanted-but-good-\\pvz-lawn-and-order\\actors\\plants\\rangedplants\\cabbagepult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|solutionrelative:actors\\plants\\rangedplants\\cabbagepult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|c:\\users\\g$$$\\documents\\pvz-lawn-and-order\\plants-vs.-zombies-lawn-and-order-replanted-but-good-\\pvz-lawn-and-order\\plants\\peashooter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|solutionrelative:plants\\peashooter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|c:\\users\\g$$$\\documents\\pvz-lawn-and-order\\plants-vs.-zombies-lawn-and-order-replanted-but-good-\\pvz-lawn-and-order\\actors\\plants\\rangedplants\\peashooter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|solutionrelative:actors\\plants\\rangedplants\\peashooter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|c:\\users\\g$$$\\documents\\pvz-lawn-and-order\\plants-vs.-zombies-lawn-and-order-replanted-but-good-\\pvz-lawn-and-order\\plants\\cabbagepult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|solutionrelative:plants\\cabbagepult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|c:\\users\\g$$$\\documents\\pvz-lawn-and-order\\plants-vs.-zombies-lawn-and-order-replanted-but-good-\\pvz-lawn-and-order\\actors\\plants\\rangedplants\\repeater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|solutionrelative:actors\\plants\\rangedplants\\repeater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|c:\\users\\g$$$\\documents\\pvz-lawn-and-order\\plants-vs.-zombies-lawn-and-order-replanted-but-good-\\pvz-lawn-and-order\\actors\\zombie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|solutionrelative:actors\\zombie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|c:\\users\\g$$$\\documents\\pvz-lawn-and-order\\plants-vs.-zombies-lawn-and-order-replanted-but-good-\\pvz-lawn-and-order\\actors\\plants\\defensiveplants\\wallnut.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|solutionrelative:actors\\plants\\defensiveplants\\wallnut.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|c:\\users\\g$$$\\documents\\pvz-lawn-and-order\\plants-vs.-zombies-lawn-and-order-replanted-but-good-\\pvz-lawn-and-order\\actors\\arcingprojectiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|solutionrelative:actors\\arcingprojectiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|c:\\users\\g$$$\\documents\\pvz-lawn-and-order\\plants-vs.-zombies-lawn-and-order-replanted-but-good-\\pvz-lawn-and-order\\actors\\plants\\defensiveplants\\defensiveplant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|solutionrelative:actors\\plants\\defensiveplants\\defensiveplant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|c:\\users\\g$$$\\documents\\pvz-lawn-and-order\\plants-vs.-zombies-lawn-and-order-replanted-but-good-\\pvz-lawn-and-order\\actors\\plant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|solutionrelative:actors\\plant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|c:\\users\\g$$$\\documents\\pvz-lawn-and-order\\plants-vs.-zombies-lawn-and-order-replanted-but-good-\\pvz-lawn-and-order\\actors\\plants\\rangedplants\\rangedplant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|solutionrelative:actors\\plants\\rangedplants\\rangedplant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|c:\\users\\g$$$\\documents\\pvz-lawn-and-order\\plants-vs.-zombies-lawn-and-order-replanted-but-good-\\pvz-lawn-and-order\\actors\\projectiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|solutionrelative:actors\\projectiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|c:\\users\\g$$$\\documents\\pvz-lawn-and-order\\plants-vs.-zombies-lawn-and-order-replanted-but-good-\\pvz-lawn-and-order\\plants\\rangedplant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|solutionrelative:plants\\rangedplant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|c:\\users\\g$$$\\documents\\pvz-lawn-and-order\\plants-vs.-zombies-lawn-and-order-replanted-but-good-\\pvz-lawn-and-order\\actors\\zombies\\zombie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|solutionrelative:actors\\zombies\\zombie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|c:\\users\\g$$$\\documents\\pvz-lawn-and-order\\plants-vs.-zombies-lawn-and-order-replanted-but-good-\\pvz-lawn-and-order\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,59 +50,31 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PlantTiles.cs",
-              "DocumentMoniker": "C:\\Users\\G$$$\\Documents\\pvz-lawn-and-order\\Plants-vs.-Zombies-Lawn-and-Order-Replanted-but-Good-\\pvz-lawn-and-order\\GenMechanics\\PlantTiles.cs",
-              "RelativeDocumentMoniker": "GenMechanics\\PlantTiles.cs",
-              "ToolTip": "C:\\Users\\G$$$\\Documents\\pvz-lawn-and-order\\Plants-vs.-Zombies-Lawn-and-Order-Replanted-but-Good-\\pvz-lawn-and-order\\GenMechanics\\PlantTiles.cs",
-              "RelativeToolTip": "GenMechanics\\PlantTiles.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "Wallnut.cs",
+              "DocumentMoniker": "C:\\USERS\\G$$$\\DOCUMENTS\\PVZ-LAWN-AND-ORDER\\PLANTS-VS.-ZOMBIES-LAWN-AND-ORDER-REPLANTED-BUT-GOOD-\\PVZ-LAWN-AND-ORDER\\Actors\\Plants\\DefensivePlants\\Wallnut.cs",
+              "RelativeDocumentMoniker": "Actors\\Plants\\DefensivePlants\\Wallnut.cs",
+              "ToolTip": "C:\\USERS\\G$$$\\DOCUMENTS\\PVZ-LAWN-AND-ORDER\\PLANTS-VS.-ZOMBIES-LAWN-AND-ORDER-REPLANTED-BUT-GOOD-\\PVZ-LAWN-AND-ORDER\\Actors\\Plants\\DefensivePlants\\Wallnut.cs",
+              "RelativeToolTip": "Actors\\Plants\\DefensivePlants\\Wallnut.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T05:14:26.109Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Tiles.cs",
-              "DocumentMoniker": "C:\\Users\\G$$$\\Documents\\pvz-lawn-and-order\\Plants-vs.-Zombies-Lawn-and-Order-Replanted-but-Good-\\pvz-lawn-and-order\\GenMechanics\\Tiles.cs",
-              "RelativeDocumentMoniker": "GenMechanics\\Tiles.cs",
-              "ToolTip": "C:\\Users\\G$$$\\Documents\\pvz-lawn-and-order\\Plants-vs.-Zombies-Lawn-and-Order-Replanted-but-Good-\\pvz-lawn-and-order\\GenMechanics\\Tiles.cs",
-              "RelativeToolTip": "GenMechanics\\Tiles.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T05:14:03.839Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-02T07:09:26.417Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "ArcingProjectiles.cs",
-              "DocumentMoniker": "C:\\Users\\G$$$\\Documents\\pvz-lawn-and-order\\Plants-vs.-Zombies-Lawn-and-Order-Replanted-but-Good-\\pvz-lawn-and-order\\Actors\\ArcingProjectiles.cs",
-              "RelativeDocumentMoniker": "Actors\\ArcingProjectiles.cs",
-              "ToolTip": "C:\\Users\\G$$$\\Documents\\pvz-lawn-and-order\\Plants-vs.-Zombies-Lawn-and-Order-Replanted-but-Good-\\pvz-lawn-and-order\\Actors\\ArcingProjectiles.cs",
-              "RelativeToolTip": "Actors\\ArcingProjectiles.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAPAAAAAAAAAA==",
+              "Title": "DefensivePlant.cs",
+              "DocumentMoniker": "C:\\USERS\\G$$$\\DOCUMENTS\\PVZ-LAWN-AND-ORDER\\PLANTS-VS.-ZOMBIES-LAWN-AND-ORDER-REPLANTED-BUT-GOOD-\\PVZ-LAWN-AND-ORDER\\Actors\\Plants\\DefensivePlants\\DefensivePlant.cs",
+              "RelativeDocumentMoniker": "Actors\\Plants\\DefensivePlants\\DefensivePlant.cs",
+              "ToolTip": "C:\\USERS\\G$$$\\DOCUMENTS\\PVZ-LAWN-AND-ORDER\\PLANTS-VS.-ZOMBIES-LAWN-AND-ORDER-REPLANTED-BUT-GOOD-\\PVZ-LAWN-AND-ORDER\\Actors\\Plants\\DefensivePlants\\DefensivePlant.cs",
+              "RelativeToolTip": "Actors\\Plants\\DefensivePlants\\DefensivePlant.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T04:49:00.843Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CabbagePult.cs",
-              "DocumentMoniker": "C:\\Users\\G$$$\\Documents\\pvz-lawn-and-order\\Plants-vs.-Zombies-Lawn-and-Order-Replanted-but-Good-\\pvz-lawn-and-order\\Plants\\CabbagePult.cs",
-              "RelativeDocumentMoniker": "Plants\\CabbagePult.cs",
-              "ToolTip": "C:\\Users\\G$$$\\Documents\\pvz-lawn-and-order\\Plants-vs.-Zombies-Lawn-and-Order-Replanted-but-Good-\\pvz-lawn-and-order\\Plants\\CabbagePult.cs",
-              "RelativeToolTip": "Plants\\CabbagePult.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAC8AAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T04:38:34.652Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-02T06:48:51.61Z"
             },
             {
               "$type": "Document",
@@ -112,23 +84,46 @@
               "RelativeDocumentMoniker": "Actors\\Projectiles.cs",
               "ToolTip": "C:\\Users\\G$$$\\Documents\\pvz-lawn-and-order\\Plants-vs.-Zombies-Lawn-and-Order-Replanted-but-Good-\\pvz-lawn-and-order\\Actors\\Projectiles.cs",
               "RelativeToolTip": "Actors\\Projectiles.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA/AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T04:27:46.278Z",
+              "WhenOpened": "2025-12-02T06:47:47.303Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CabbagePult.cs",
+              "DocumentMoniker": "C:\\USERS\\G$$$\\DOCUMENTS\\PVZ-LAWN-AND-ORDER\\PLANTS-VS.-ZOMBIES-LAWN-AND-ORDER-REPLANTED-BUT-GOOD-\\PVZ-LAWN-AND-ORDER\\Actors\\Plants\\RangedPlants\\CabbagePult.cs",
+              "RelativeDocumentMoniker": "Actors\\Plants\\RangedPlants\\CabbagePult.cs",
+              "ToolTip": "C:\\USERS\\G$$$\\DOCUMENTS\\PVZ-LAWN-AND-ORDER\\PLANTS-VS.-ZOMBIES-LAWN-AND-ORDER-REPLANTED-BUT-GOOD-\\PVZ-LAWN-AND-ORDER\\Actors\\Plants\\RangedPlants\\CabbagePult.cs",
+              "RelativeToolTip": "Actors\\Plants\\RangedPlants\\CabbagePult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T06:46:31.615Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Peashooter.cs",
-              "DocumentMoniker": "C:\\Users\\G$$$\\Documents\\pvz-lawn-and-order\\Plants-vs.-Zombies-Lawn-and-Order-Replanted-but-Good-\\pvz-lawn-and-order\\Plants\\Peashooter.cs",
-              "RelativeDocumentMoniker": "Plants\\Peashooter.cs",
-              "ToolTip": "C:\\Users\\G$$$\\Documents\\pvz-lawn-and-order\\Plants-vs.-Zombies-Lawn-and-Order-Replanted-but-Good-\\pvz-lawn-and-order\\Plants\\Peashooter.cs",
-              "RelativeToolTip": "Plants\\Peashooter.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAA3wBoAAAARAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\USERS\\G$$$\\DOCUMENTS\\PVZ-LAWN-AND-ORDER\\PLANTS-VS.-ZOMBIES-LAWN-AND-ORDER-REPLANTED-BUT-GOOD-\\PVZ-LAWN-AND-ORDER\\Actors\\Plants\\RangedPlants\\Peashooter.cs",
+              "RelativeDocumentMoniker": "Actors\\Plants\\RangedPlants\\Peashooter.cs",
+              "ToolTip": "C:\\USERS\\G$$$\\DOCUMENTS\\PVZ-LAWN-AND-ORDER\\PLANTS-VS.-ZOMBIES-LAWN-AND-ORDER-REPLANTED-BUT-GOOD-\\PVZ-LAWN-AND-ORDER\\Actors\\Plants\\RangedPlants\\Peashooter.cs",
+              "RelativeToolTip": "Actors\\Plants\\RangedPlants\\Peashooter.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAwwDEAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T03:21:07.24Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-02T06:46:26.512Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Repeater.cs",
+              "DocumentMoniker": "C:\\USERS\\G$$$\\DOCUMENTS\\PVZ-LAWN-AND-ORDER\\PLANTS-VS.-ZOMBIES-LAWN-AND-ORDER-REPLANTED-BUT-GOOD-\\PVZ-LAWN-AND-ORDER\\Actors\\Plants\\RangedPlants\\Repeater.cs",
+              "RelativeDocumentMoniker": "Actors\\Plants\\RangedPlants\\Repeater.cs",
+              "ToolTip": "C:\\USERS\\G$$$\\DOCUMENTS\\PVZ-LAWN-AND-ORDER\\PLANTS-VS.-ZOMBIES-LAWN-AND-ORDER-REPLANTED-BUT-GOOD-\\PVZ-LAWN-AND-ORDER\\Actors\\Plants\\RangedPlants\\Repeater.cs",
+              "RelativeToolTip": "Actors\\Plants\\RangedPlants\\Repeater.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAADwvzEAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T06:45:55.596Z"
             },
             {
               "$type": "Document",
@@ -140,44 +135,41 @@
               "RelativeToolTip": "GameManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T03:50:31.755Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "RangedPlant.cs",
-              "DocumentMoniker": "C:\\Users\\G$$$\\Documents\\pvz-lawn-and-order\\Plants-vs.-Zombies-Lawn-and-Order-Replanted-but-Good-\\pvz-lawn-and-order\\Plants\\RangedPlant.cs",
-              "RelativeDocumentMoniker": "Plants\\RangedPlant.cs",
-              "ToolTip": "C:\\Users\\G$$$\\Documents\\pvz-lawn-and-order\\Plants-vs.-Zombies-Lawn-and-Order-Replanted-but-Good-\\pvz-lawn-and-order\\Plants\\RangedPlant.cs",
-              "RelativeToolTip": "Plants\\RangedPlant.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T03:11:03.054Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Zombie.cs",
-              "DocumentMoniker": "C:\\USERS\\G$$$\\DOCUMENTS\\PVZ-LAWN-AND-ORDER\\PLANTS-VS.-ZOMBIES-LAWN-AND-ORDER-REPLANTED-BUT-GOOD-\\PVZ-LAWN-AND-ORDER\\Actors\\Zombie.cs",
-              "RelativeDocumentMoniker": "Actors\\Zombie.cs",
-              "ToolTip": "C:\\USERS\\G$$$\\DOCUMENTS\\PVZ-LAWN-AND-ORDER\\PLANTS-VS.-ZOMBIES-LAWN-AND-ORDER-REPLANTED-BUT-GOOD-\\PVZ-LAWN-AND-ORDER\\Actors\\Zombie.cs",
-              "RelativeToolTip": "Actors\\Zombie.cs",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAowGIAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-19T07:41:38.394Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-25T03:50:31.755Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "RangedPlant.cs",
+              "DocumentMoniker": "C:\\USERS\\G$$$\\DOCUMENTS\\PVZ-LAWN-AND-ORDER\\PLANTS-VS.-ZOMBIES-LAWN-AND-ORDER-REPLANTED-BUT-GOOD-\\PVZ-LAWN-AND-ORDER\\Actors\\Plants\\RangedPlants\\RangedPlant.cs",
+              "RelativeDocumentMoniker": "Actors\\Plants\\RangedPlants\\RangedPlant.cs",
+              "ToolTip": "C:\\USERS\\G$$$\\DOCUMENTS\\PVZ-LAWN-AND-ORDER\\PLANTS-VS.-ZOMBIES-LAWN-AND-ORDER-REPLANTED-BUT-GOOD-\\PVZ-LAWN-AND-ORDER\\Actors\\Plants\\RangedPlants\\RangedPlant.cs",
+              "RelativeToolTip": "Actors\\Plants\\RangedPlants\\RangedPlant.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T03:11:03.054Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Zombie.cs",
+              "DocumentMoniker": "C:\\Users\\G$$$\\Documents\\pvz-lawn-and-order\\Plants-vs.-Zombies-Lawn-and-Order-Replanted-but-Good-\\pvz-lawn-and-order\\Actors\\Zombies\\Zombie.cs",
+              "RelativeDocumentMoniker": "Actors\\Zombies\\Zombie.cs",
+              "ToolTip": "C:\\Users\\G$$$\\Documents\\pvz-lawn-and-order\\Plants-vs.-Zombies-Lawn-and-Order-Replanted-but-Good-\\pvz-lawn-and-order\\Actors\\Zombies\\Zombie.cs",
+              "RelativeToolTip": "Actors\\Zombies\\Zombie.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAowGMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T07:41:38.394Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Plant.cs",
-              "DocumentMoniker": "C:\\USERS\\G$$$\\DOCUMENTS\\PVZ-LAWN-AND-ORDER\\PLANTS-VS.-ZOMBIES-LAWN-AND-ORDER-REPLANTED-BUT-GOOD-\\PVZ-LAWN-AND-ORDER\\Actors\\Plant.cs",
-              "RelativeDocumentMoniker": "Actors\\Plant.cs",
-              "ToolTip": "C:\\USERS\\G$$$\\DOCUMENTS\\PVZ-LAWN-AND-ORDER\\PLANTS-VS.-ZOMBIES-LAWN-AND-ORDER-REPLANTED-BUT-GOOD-\\PVZ-LAWN-AND-ORDER\\Actors\\Plant.cs",
-              "RelativeToolTip": "Actors\\Plant.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAAEcAAAAcAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\G$$$\\Documents\\pvz-lawn-and-order\\Plants-vs.-Zombies-Lawn-and-Order-Replanted-but-Good-\\pvz-lawn-and-order\\Actors\\Plants\\Plant.cs",
+              "RelativeDocumentMoniker": "Actors\\Plants\\Plant.cs",
+              "ToolTip": "C:\\Users\\G$$$\\Documents\\pvz-lawn-and-order\\Plants-vs.-Zombies-Lawn-and-Order-Replanted-but-Good-\\pvz-lawn-and-order\\Actors\\Plants\\Plant.cs",
+              "RelativeToolTip": "Actors\\Plants\\Plant.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-19T07:41:01.593Z",
               "EditorCaption": ""

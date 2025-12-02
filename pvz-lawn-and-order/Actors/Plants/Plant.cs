@@ -60,16 +60,15 @@ namespace pvzlawnandorder
             animPlay = GetNode<AnimationPlayer>("AnimationPlayer");
             Location = location;
             Game = game;
+            Lane = Location.Y;
 
             animPlay.AnimationFinished += OnSpawnFinish;
             animPlay.Play("Spawn");
         }
         protected void Die()
         {
-            if (IsAlive)
-            {
-                animPlay.Play("Death");
-                _ExitTree();
-            }
+            animPlay.Play("Death");
+            QueueFree();
+        }
     }
 }
