@@ -19,10 +19,6 @@ namespace pvzlawnandorder
         protected string Type { get; set; }
         protected int Damage { get; set; }
         protected int Lane { get; set; }
-        protected Animation Spawn { get; set; }
-        protected Animation Idle { get; set; }
-        protected Animation Death { get; set; }
-        protected Animation Attack { get; set; }
         protected float Cooldown { get; set; }
         protected float timer = 0f;
         protected bool IsAlive => Health > 0;
@@ -69,6 +65,11 @@ namespace pvzlawnandorder
         {
             animPlay.Play("Death");
             QueueFree();
+        }
+
+        public override void _Ready()
+        {
+            animPlay = GetNode<AnimationPlayer>("AnimationPlayer");
         }
     }
 }

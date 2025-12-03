@@ -15,18 +15,15 @@ namespace pvzlawnandorder
         protected GameManager Game { get; set; }
         protected int MaxHealth { get; set; }
         protected int Health {  get; set; }
+        protected int ExtraHealth { get; set; }
         protected string Type { get; set; }
         protected int Damage { get; set; }
         protected int Cooldown { get; set; }
-        protected int Speed { get; set; }
+        protected float Speed { get; set; }
         protected float timer = 0f;
         public int Lane { get; set; }
         protected bool IsAlive => Health > 0;
         protected bool CanAttack => timer >= Cooldown;
-        protected Animation Spawn { get; set; }
-        protected Animation Idle { get; set; }
-        protected Animation Death { get; set; }
-        protected Animation AttackAnim { get; set; }
         protected Plant target;
         protected bool IsAttacking => target != null;
 
@@ -50,6 +47,12 @@ namespace pvzlawnandorder
 
         public override void _Ready()
         {
+            animPlay = GetNode<AnimationPlayer>("AnimationPlayer");
+            MaxHealth = 190;
+            Health = MaxHealth;
+            Damage = 100;
+            Speed = 4.7f;
+            ExtraHealth = 89;
             Game.AddZombie(this);
         }
 
@@ -63,7 +66,12 @@ namespace pvzlawnandorder
             Health -= damage;
             if (Health <= 0)
             {
-                Die();
+                animPlay.Play("HeadPop");
+                ExtraHealth -= damage;
+                if (ExtraHealth <= 0)
+                {
+                    Die();
+                }
             }
         }
 
@@ -74,7 +82,7 @@ namespace pvzlawnandorder
 
         private void OnEnterPlantTile(Area2D area)
         {
-            if(area.GetParent() is Plant plant)
+            if (area.GetParent() is Plant plant)
             {
                 StartTarget(plant);
             }    
@@ -90,7 +98,14 @@ namespace pvzlawnandorder
             target = null;
         }
 
-        protected abstract void Attack();
+        protected void Attack()
+        {
+            if (target != null)
+            {
+                animPlay.Play("Attack");
+                target.TakeDamage(Damage);
+            }
+        }
         protected void Die()
         {
                 animPlay.Play("Death");

@@ -10,6 +10,7 @@ namespace pvzlawnandorder.Plants
     {
         public override void _Ready()
         {
+            base._Ready();
             MaxHealth = 4000;
             Health = MaxHealth;
             SunCost = 50;

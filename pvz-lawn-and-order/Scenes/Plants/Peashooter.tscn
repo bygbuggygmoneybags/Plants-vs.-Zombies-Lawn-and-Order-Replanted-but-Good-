@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bkdvvrj4ewya7"]
+
+[ext_resource type="Script" uid="uid://dvxmrtrrj6uki" path="res://Actors/Plants/RangedPlants/Peashooter.cs" id="1_rxlll"]
+
+[node name="Peashooter" type="Node2D"]
+script = ExtResource("1_rxlll")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

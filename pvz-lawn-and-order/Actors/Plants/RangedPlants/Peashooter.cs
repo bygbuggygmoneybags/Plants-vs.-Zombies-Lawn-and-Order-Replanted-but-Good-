@@ -25,27 +25,28 @@ namespace pvzlawnandorder.Plants
             {
                 for (int i = 0; i < numProjectiles; i++)
                 {
+                    animPlay?.Play("Attack");
                     Node2D pea = PeaProj.Instantiate<Node2D>();
 
                     pea.GlobalPosition = Location;
 
                     if (pea is Projectiles projectile)
                     {
+                        projectile.Damage = Damage;
                         projectile.Speed = speed;
                         projectile.PierceCount = piercingNum;
-
                         projectile.Direction = Vector2.Right;
                     }
 
                     GetTree().CurrentScene.AddChild(pea);
-                }
 
-                animPlay?.Play("Attack");
+                }
             }
         }
 
         public override void _Ready()
         {
+            base._Ready();
             MaxHealth = 300;
             Health = MaxHealth;
             Damage = 20;

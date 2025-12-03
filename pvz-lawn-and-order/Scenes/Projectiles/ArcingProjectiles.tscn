@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cy3u775hxh2jp"]
+
+[ext_resource type="Script" uid="uid://cqpge5d0vp78s" path="res://Actors/ArcingProjectiles.cs" id="1_2qt16"]
+
+[node name="ArcingProjectiles" type="Node2D"]
+script = ExtResource("1_2qt16")

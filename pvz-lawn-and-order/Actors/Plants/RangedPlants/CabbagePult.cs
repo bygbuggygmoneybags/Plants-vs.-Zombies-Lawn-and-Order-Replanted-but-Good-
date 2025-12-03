@@ -34,21 +34,21 @@ namespace pvzlawnandorder.Plants
 
                 for (int i = 0; i < numProjectiles; i++)
                 {
+                    animPlay.Play("Attack");
                     Node2D cabbage = CabbageProj.Instantiate<Node2D>();
-
                     if (cabbage is ArcingProjectiles projectile)
                     {
+                        projectile.Damage = Damage;
                         projectile.Speed = speed;
                     }
 
                     GetTree().CurrentScene.AddChild(cabbage);
                 }
-
-                animPlay.Play("Attack");
             }
         }
         public override void _Ready()
         {
+            base._Ready();
             MaxHealth = 300;
             Health = MaxHealth;
             Damage = 40;
