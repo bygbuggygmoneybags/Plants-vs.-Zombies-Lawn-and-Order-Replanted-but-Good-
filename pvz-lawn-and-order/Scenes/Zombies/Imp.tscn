@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bic2udqsbk8oy"]
+
+[ext_resource type="Script" uid="uid://61migl4c65fo" path="res://Scripts/Zombies/Imp.cs" id="1_naa30"]
+
+[node name="Imp" type="Node2D"]
+script = ExtResource("1_naa30")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
