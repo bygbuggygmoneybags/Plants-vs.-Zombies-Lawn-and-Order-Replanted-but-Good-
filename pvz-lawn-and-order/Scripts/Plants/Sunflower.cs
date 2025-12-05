@@ -25,7 +25,7 @@ namespace pvzlawnandorder
 			GetTree().CurrentScene.AddChild(sun);
 
 			sun.Call("init_sunflower", GlobalPosition.X, GlobalPosition.Y);
-			animPlay.Play("Produce");
+            animPlay.Play("Produce");
 		}
 	}
 }

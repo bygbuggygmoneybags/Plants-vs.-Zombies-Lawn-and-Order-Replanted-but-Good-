@@ -10,7 +10,7 @@ namespace pvzlawnandorder
 		[Export] private int gridWidth = 9;
 		[Export] private int gridHeight = 5;
 
-		[Export] private TileSet tileSetResource = "res://TileSet.tres";
+		[Export] private TileSet tileSetResource;
 
 
 
@@ -33,7 +33,7 @@ namespace pvzlawnandorder
 				{
 					Vector2I cellCoords = new Vector2I(x, y);
 					SetCell(cellCoords, tileSourceId, tileAtlasCoords);
-					TileData tileData = GetCellTileData(coords);
+					TileData tileData = GetCellTileData(cellCoords);
 					if (tileData != null)
 					{
 						tileData.SetCustomData("plantable", true);
