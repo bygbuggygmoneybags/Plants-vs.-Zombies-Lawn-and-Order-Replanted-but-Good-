@@ -13,9 +13,9 @@ func _ready():
 
 
 func init_sky():
-	global_position.x = randi_range(200, 1000)
+	global_position.x = randi_range(0, 550)
 	global_position.y = -20
-	end_y = randi_range(100, 550)
+	end_y = randi_range(0, 300)
 	self.tween.tween_property(self, "global_position:y", end_y, end_y / 100)
 
 

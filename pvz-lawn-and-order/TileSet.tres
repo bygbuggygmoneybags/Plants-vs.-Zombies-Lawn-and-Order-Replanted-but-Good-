@@ -1,13 +1,15 @@
 [gd_resource type="TileSet" load_steps=3 format=3 uid="uid://nr4ykmp1oxnn"]
 
-[ext_resource type="Texture2D" uid="uid://3f2ax3fisybe" path="res://PNGs/TilesetDemo.png" id="1_g2hbc"]
+[ext_resource type="Texture2D" uid="uid://ylkuh8lmlgkg" path="res://PNGs/TilesetActual.png" id="2_t7fou"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hhvbn"]
-texture = ExtResource("1_g2hbc")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g2hbc"]
+texture = ExtResource("2_t7fou")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 1:0/0 = 0
+2:0/0 = 0
 
 [resource]
 tile_size = Vector2i(64, 64)
-sources/0 = SubResource("TileSetAtlasSource_hhvbn")
+sources/5 = SubResource("TileSetAtlasSource_g2hbc")
+tile_proxies/coords_level = [[1, Vector2i(0, 0)], [3, Vector2i(0, 0)], [2, Vector2i(0, 0)], [3, Vector2i(1, 0)], [3, Vector2i(0, 0)], [5, Vector2i(0, 0)], [3, Vector2i(1, 0)], [5, Vector2i(1, 0)], [4, Vector2i(0, 0)], [5, Vector2i(2, 0)]]

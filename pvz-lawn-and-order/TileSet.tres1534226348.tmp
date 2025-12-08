@@ -1,0 +1,16 @@
+[gd_resource type="TileSet" load_steps=4 format=3 uid="uid://nr4ykmp1oxnn"]
+
+[ext_resource type="Script" uid="uid://ccda1enxvffpk" path="res://tile_map_layer.gd" id="1_hhvbn"]
+[ext_resource type="Texture2D" uid="uid://ylkuh8lmlgkg" path="res://PNGs/TilesetActual.png" id="2_t7fou"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2edxk"]
+texture = ExtResource("2_t7fou")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+
+[resource]
+tile_size = Vector2i(64, 64)
+sources/3 = SubResource("TileSetAtlasSource_2edxk")
+tile_proxies/coords_level = [[1, Vector2i(0, 0)], [3, Vector2i(0, 0)], [2, Vector2i(0, 0)], [3, Vector2i(1, 0)]]
+script = ExtResource("1_hhvbn")
