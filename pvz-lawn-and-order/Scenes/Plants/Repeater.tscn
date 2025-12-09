@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://clipj26sjclec"]
 
-[ext_resource type="Script" uid="uid://crqd3mndmsdri" path="res://Actors/Plants/RangedPlants/Repeater.cs" id="1_wfml8"]
+[ext_resource type="Script" uid="uid://crqd3mndmsdri" path="res://Scripts/Plants/RangedPlants/Repeater.cs" id="1_wfml8"]
 
 [node name="Repeater" type="Node2D"]
 script = ExtResource("1_wfml8")

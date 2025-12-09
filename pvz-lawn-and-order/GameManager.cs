@@ -8,6 +8,8 @@ namespace pvzlawnandorder
 	{
 		public List<List<Zombie>> ZombiesInLane = new();
 		[Export] public PackedScene Sun { get; set; }
+		[Export] public PackedScene PlantFood { get; set; }
+		private Timer foodTime;
 		private Timer sunTime;
 		int score = 0;
 		Node sun;
@@ -17,6 +19,8 @@ namespace pvzlawnandorder
 		{
 			sunTime = GetNode<Timer>("SunTimer");
 			sunTime.Timeout += SpawnSky;
+			foodTime = GetNode<Timer>("FoodTimer");
+			foodTime.Timeout += OnTimeout;
 			for (int i = 0; i < 5; i++)
 			{
 				ZombiesInLane.Add(new List<Zombie>());
@@ -34,6 +38,19 @@ namespace pvzlawnandorder
 			GetTree().CurrentScene.AddChild(sun);
 
 			sun.Call("init_sky");
+		}
+
+		private void OnTimeout()
+		{
+			SpawnPlantFood(new Vector2((float)GD.RandRange(0,8),(float)GD.RandRange(0,4)));
+		}
+
+		private void SpawnPlantFood(Vector2 worldPosition)
+		{
+			Area2D food = (Area2D)PlantFood.Instantiate();
+			GetTree().CurrentScene.AddChild(food);
+			
+			food.GlobalPosition = worldPosition;
 		}
 
 		public void AddZombie(Zombie zomb)
