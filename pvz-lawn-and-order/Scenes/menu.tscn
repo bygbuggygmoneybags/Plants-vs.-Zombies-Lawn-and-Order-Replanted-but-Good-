@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://boqyru8q2wwpm"]
+[gd_scene load_steps=9 format=3 uid="uid://boqyru8q2wwpm"]
 
 [ext_resource type="Script" uid="uid://b23uln2hvuvje" path="res://menu.gd" id="1_1rerr"]
+[ext_resource type="Script" uid="uid://buftnc8ydhw23" path="res://Scenes/Options.gd" id="2_xhh6f"]
 
 [sub_resource type="Gradient" id="Gradient_xhh6f"]
 
@@ -15,12 +16,19 @@ colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1)
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_wwsa2"]
 gradient = SubResource("Gradient_158mb")
 
+[sub_resource type="Gradient" id="Gradient_cayip"]
+offsets = PackedFloat32Array(0.9710145, 0.9927536, 1)
+colors = PackedColorArray(0.057971016, 0.057971016, 0.057971016, 1, 0, 0, 0, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_158mb"]
+gradient = SubResource("Gradient_cayip")
+
 [node name="menu" type="Node2D"]
 script = ExtResource("1_1rerr")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="MainMenu" type="Camera2D" parent="."]
 
-[node name="AccountButton" type="TextureButton" parent="Camera2D"]
+[node name="AccountButton" type="TextureButton" parent="MainMenu"]
 offset_left = -511.0
 offset_top = -289.0
 offset_right = -249.0
@@ -28,7 +36,7 @@ offset_bottom = -225.0
 texture_normal = SubResource("GradientTexture2D_cayip")
 stretch_mode = 0
 
-[node name="AdventureButton" type="TextureButton" parent="Camera2D"]
+[node name="AdventureButton" type="TextureButton" parent="MainMenu"]
 offset_left = 206.0
 offset_top = -172.0
 offset_right = 462.0
@@ -36,7 +44,7 @@ offset_bottom = -132.0
 texture_normal = SubResource("GradientTexture1D_wwsa2")
 stretch_mode = 0
 
-[node name="Mini-GameButton" type="TextureButton" parent="Camera2D"]
+[node name="Mini-GameButton" type="TextureButton" parent="MainMenu"]
 offset_left = 203.0
 offset_top = -115.0
 offset_right = 459.0
@@ -44,7 +52,7 @@ offset_bottom = -75.0
 texture_normal = SubResource("GradientTexture1D_wwsa2")
 stretch_mode = 0
 
-[node name="PuzzleButton" type="TextureButton" parent="Camera2D"]
+[node name="PuzzleButton" type="TextureButton" parent="MainMenu"]
 offset_left = 203.0
 offset_top = -53.0
 offset_right = 459.0
@@ -52,7 +60,7 @@ offset_bottom = -13.0
 texture_normal = SubResource("GradientTexture1D_wwsa2")
 stretch_mode = 0
 
-[node name="SurvivalButton" type="TextureButton" parent="Camera2D"]
+[node name="SurvivalButton" type="TextureButton" parent="MainMenu"]
 offset_left = 209.0
 offset_top = 20.0
 offset_right = 465.0
@@ -60,39 +68,104 @@ offset_bottom = 60.0
 texture_normal = SubResource("GradientTexture1D_wwsa2")
 stretch_mode = 0
 
-[node name="OptionsButton" type="TextureButton" parent="Camera2D"]
+[node name="OptionsButton" type="TextureButton" parent="MainMenu"]
 offset_left = 215.0
 offset_top = 230.0
 offset_right = 471.0
 offset_bottom = 270.0
-texture_normal = SubResource("GradientTexture1D_wwsa2")
+texture_normal = SubResource("GradientTexture1D_158mb")
 stretch_mode = 0
 
-[node name="error" type="Popup" parent="Camera2D"]
+[node name="error" type="Popup" parent="MainMenu"]
 oversampling_override = 1.0
 title = "Not Implemented"
 visible = true
 
-[node name="MenuBar" type="MenuBar" parent="Camera2D"]
-visible = false
-offset_left = -311.0
-offset_top = -206.0
-offset_right = 285.0
-offset_bottom = 251.0
-
-[node name="Music" type="PopupMenu" parent="Camera2D/MenuBar"]
+[node name="PopupPanel" type="PopupPanel" parent="MainMenu/error"]
 oversampling_override = 1.0
+title = "Error"
+initial_position = 1
+size = Vector2i(207, 100)
+visible = true
 
-[node name="Sound" type="PopupMenu" parent="Camera2D/MenuBar"]
-oversampling_override = 1.0
+[node name="Label" type="Label" parent="MainMenu/error/PopupPanel"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -99.5
+offset_top = -46.0
+offset_right = 99.5
+offset_bottom = 46.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Not implemented. sorry :("
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="3d Acceleration" type="PopupMenu" parent="Camera2D/MenuBar"]
-oversampling_override = 1.0
+[node name="GridContainer" type="GridContainer" parent="MainMenu"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -163.5
+offset_top = -150.5
+offset_right = 163.5
+offset_bottom = 150.5
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Fullscreen" type="PopupMenu" parent="Camera2D/MenuBar"]
-oversampling_override = 1.0
+[node name="MenuBar" type="MenuBar" parent="MainMenu/GridContainer"]
+layout_direction = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_xhh6f")
 
-[node name="Back" type="Button" parent="Camera2D/MenuBar"]
+[node name="Music" type="HSlider" parent="MainMenu/GridContainer/MenuBar"]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 51.0
+offset_top = 50.5
+offset_right = 291.0
+offset_bottom = 66.5
+
+[node name="Sound" type="HSlider" parent="MainMenu/GridContainer/MenuBar"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 85.5
+offset_right = 290.0
+offset_bottom = 101.5
+
+[node name="3d Acceleration" type="CheckBox" parent="MainMenu/GridContainer/MenuBar"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 130.5
+offset_right = 67.0
+offset_bottom = 154.5
+
+[node name="Fullscreen" type="CheckBox" parent="MainMenu/GridContainer/MenuBar"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 178.5
+offset_right = 67.0
+offset_bottom = 202.5
+
+[node name="Back" type="TextureButton" parent="MainMenu/GridContainer/MenuBar"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -128.0
+offset_top = -40.0
+offset_right = 128.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = SubResource("GradientTexture1D_wwsa2")
+stretch_mode = 0
+
+[connection signal="pressed" from="MainMenu/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="gui_input" from="MainMenu/GridContainer/MenuBar" to="MainMenu/OptionsButton" method="_on_menu_bar_gui_input"]
