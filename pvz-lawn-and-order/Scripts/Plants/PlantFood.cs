@@ -7,39 +7,47 @@ using Godot;
 
 namespace pvzlawnandorder
 {
-    public partial class PlantFood : Node
+    public partial class PlantFood : Area2D
     {
         Plant AppliedPlant { get; set; }
         private string Type { get; set; }
         [Export] public Timer Uptime { get; set; }
         public override void _Ready()
         {
+            List<string> types = new List<string>() { "Attack Speed", "Health", "Duplicate"};
             Random r = new Random();
-            int typeNum = r.Next(1, 3);
-            switch (typeNum)
-            {
-                case 1:
-                    Type = "Attack Speed";
-                    ApplyEffect();
-                    break;
-                case 2:
-                    Type = "Health";
-                    ApplyEffect();
-                    break;
-                case 3:
-                    Type = "Duplicate";
-                    ApplyEffect();
-                    break;
-            }
+            Type = types[r.Next(types.Count)];
+
+            this.BodyEntered += OnEnterBody;
+
+            ApplyEffect();
+
+            Uptime.Timeout += OnTimeout;
+            Uptime.Start();
         }
 
         public void ApplyEffect()
         {
+            if (AppliedPlant == null)
+                return;
+
+            AppliedPlant.Food = this;
+            AppliedPlant.PowerUp(Type);
+        }
+
+        private void OnTimeout()
+        {
             if (AppliedPlant != null)
+                AppliedPlant.PowerUpGone(Type);
+            QueueFree();
+        }
+
+        private void OnEnterBody(Node2D body)
+        {
+            if (body is Plant plant)
             {
-                AppliedPlant.isFed = true;
-                AppliedPlant.Food = this;
-                AppliedPlant.PowerUp(Type);
+                AppliedPlant = plant;
+                QueueFree();
             }
         }
     }

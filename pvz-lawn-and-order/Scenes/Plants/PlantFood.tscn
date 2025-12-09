@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctyq45cc86af6"]
+
+[ext_resource type="Script" uid="uid://1e08eodeea4j" path="res://Scripts/Plants/PlantFood.cs" id="1_m44vu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m44vu"]
+
+[node name="PlantFood" type="Area2D" node_paths=PackedStringArray("Uptime")]
+script = ExtResource("1_m44vu")
+Uptime = NodePath("Uptime")
+
+[node name="Uptime" type="Timer" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_m44vu")

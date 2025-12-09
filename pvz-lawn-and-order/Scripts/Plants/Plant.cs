@@ -12,6 +12,7 @@ namespace pvzlawnandorder
     public abstract partial class Plant : Node2D
     {
         protected AnimationPlayer animPlay;
+        public PackedScene Self { get; set; }
         protected Vector2I Location { get; set; }
         protected GameManager Game { get; set; }
         protected int Health {  get; set; }
@@ -23,7 +24,7 @@ namespace pvzlawnandorder
         protected float Cooldown { get; set; }
         protected float timer = 0f;
         public PlantFood Food { get; set; }
-        public bool isFed = false;
+        public bool isFed => Food != null;
         protected bool IsAlive => Health > 0;
         protected bool CanAttack => timer >= Cooldown;
 
@@ -71,18 +72,34 @@ namespace pvzlawnandorder
                 switch (powerUp)
                 {
                     case "Attack Speed":
-                        Cooldown *= 2;
+                        Cooldown /= 2;
                         break;
                     case "Health":
                         Health += (MaxHealth * 3);
                         break;
                     case "Duplicate":
-                        Plant duplicate = this.Duplicate() as Plant;
-                        AddChild(duplicate);
-                        duplicate.Location += new Vector2I(1, 0);
+                        var duplicate = Self.Instantiate<Plant>();
+                        var parent = GetParent() ?? GetTree().CurrentScene;
+                        parent.AddChild(duplicate);
+                        duplicate.OnPlant(Location + new Vector2I(50, 0), Game);
                         break;
                 }
             }
+        }
+
+        public void PowerUpGone(string powerUp)
+        {
+            switch (powerUp) 
+            {
+                case "Attack Speed":
+                    Cooldown *= 2f;
+                    break;
+                case "Health":
+                    Health = MaxHealth;
+                    break;
+            }
+
+            Food = null;
         }
 
         protected void Die()
