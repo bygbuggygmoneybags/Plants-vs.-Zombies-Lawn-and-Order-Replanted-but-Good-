@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http.Headers;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using Godot;
@@ -21,6 +22,8 @@ namespace pvzlawnandorder
         protected int Lane { get; set; }
         protected float Cooldown { get; set; }
         protected float timer = 0f;
+        public PlantFood Food { get; set; }
+        public bool isFed = false;
         protected bool IsAlive => Health > 0;
         protected bool CanAttack => timer >= Cooldown;
 
@@ -53,7 +56,6 @@ namespace pvzlawnandorder
 
         protected void OnPlant(Vector2I location, GameManager game)
         {
-            animPlay = GetNode<AnimationPlayer>("AnimationPlayer");
             Location = location;
             Game = game;
             Lane = Location.Y;
@@ -61,6 +63,28 @@ namespace pvzlawnandorder
             animPlay.AnimationFinished += OnSpawnFinish;
             animPlay.Play("Spawn");
         }
+
+        public void PowerUp(string powerUp)
+        {
+            if (isFed)
+            {
+                switch (powerUp)
+                {
+                    case "Attack Speed":
+                        Cooldown *= 2;
+                        break;
+                    case "Health":
+                        Health += (MaxHealth * 3);
+                        break;
+                    case "Duplicate":
+                        Plant duplicate = this.Duplicate() as Plant;
+                        AddChild(duplicate);
+                        duplicate.Location += new Vector2I(1, 0);
+                        break;
+                }
+            }
+        }
+
         protected void Die()
         {
             animPlay.Play("Death");

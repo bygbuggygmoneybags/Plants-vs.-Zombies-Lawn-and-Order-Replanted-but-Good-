@@ -71,6 +71,7 @@ stretch_mode = 0
 [node name="error" type="Popup" parent="Camera2D"]
 oversampling_override = 1.0
 title = "Not Implemented"
+visible = true
 
 [node name="MenuBar" type="MenuBar" parent="Camera2D"]
 visible = false
@@ -80,12 +81,16 @@ offset_right = 285.0
 offset_bottom = 251.0
 
 [node name="Music" type="PopupMenu" parent="Camera2D/MenuBar"]
+oversampling_override = 1.0
 
 [node name="Sound" type="PopupMenu" parent="Camera2D/MenuBar"]
+oversampling_override = 1.0
 
 [node name="3d Acceleration" type="PopupMenu" parent="Camera2D/MenuBar"]
+oversampling_override = 1.0
 
 [node name="Fullscreen" type="PopupMenu" parent="Camera2D/MenuBar"]
+oversampling_override = 1.0
 
 [node name="Back" type="Button" parent="Camera2D/MenuBar"]
 layout_mode = 0

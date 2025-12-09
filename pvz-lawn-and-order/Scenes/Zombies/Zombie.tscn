@@ -1,6 +1,5 @@
-[gd_scene load_steps=2 format=3 uid="uid://dqojw4vwek78n"]
-
-[ext_resource type="Script" uid="uid://dhmyueiy5e4h6" path="res://Actors/Zombies/Zombie.cs" id="1_sk25r"]
+[gd_scene format=3 uid="uid://dqojw4vwek78n"]
 
 [node name="Zombie" type="Node2D"]
-script = ExtResource("1_sk25r")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

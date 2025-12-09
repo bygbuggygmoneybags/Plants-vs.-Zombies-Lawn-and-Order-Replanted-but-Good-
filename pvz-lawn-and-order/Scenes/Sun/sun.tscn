@@ -4,25 +4,25 @@
 [ext_resource type="Texture2D" uid="uid://cpwtcjrjbwuqx" path="res://Scenes/Sun/Sun_0.png" id="1_lyo1b"]
 [ext_resource type="Texture2D" uid="uid://slsjc2psg0em" path="res://Scenes/Sun/Sun_1.png" id="2_ut2pf"]
 [ext_resource type="Texture2D" uid="uid://dowk6sx5f3ny2" path="res://Scenes/Sun/Sun_2.png" id="3_mt6aj"]
-[ext_resource type="Texture2D" path="res://Actors/Zombies/Sun_3.png" id="4_3sh5w"]
-[ext_resource type="Texture2D" path="res://Actors/Zombies/Sun_4.png" id="5_ynqc7"]
-[ext_resource type="Texture2D" path="res://Actors/Zombies/Sun_5.png" id="6_4va1n"]
-[ext_resource type="Texture2D" path="res://Actors/Zombies/Sun_6.png" id="7_ipinh"]
-[ext_resource type="Texture2D" path="res://Actors/Zombies/Sun_7.png" id="8_sbgsf"]
-[ext_resource type="Texture2D" path="res://Actors/Zombies/Sun_8.png" id="9_hk2go"]
-[ext_resource type="Texture2D" path="res://Actors/Zombies/Sun_9.png" id="10_ykxft"]
-[ext_resource type="Texture2D" path="res://Actors/Zombies/Sun_10.png" id="11_ao8vt"]
-[ext_resource type="Texture2D" path="res://Actors/Zombies/Sun_11.png" id="12_0svrk"]
-[ext_resource type="Texture2D" path="res://Actors/Zombies/Sun_12.png" id="13_hy8nb"]
-[ext_resource type="Texture2D" path="res://Actors/Zombies/Sun_13.png" id="14_kv8vn"]
-[ext_resource type="Texture2D" path="res://Actors/Zombies/Sun_14.png" id="15_2mcbw"]
-[ext_resource type="Texture2D" path="res://Actors/Zombies/Sun_15.png" id="16_h0jo2"]
-[ext_resource type="Texture2D" path="res://Actors/Zombies/Sun_16.png" id="17_mtgio"]
-[ext_resource type="Texture2D" path="res://Actors/Zombies/Sun_17.png" id="18_52ol8"]
-[ext_resource type="Texture2D" path="res://Actors/Zombies/Sun_18.png" id="19_xbbuv"]
-[ext_resource type="Texture2D" path="res://Actors/Zombies/Sun_19.png" id="20_5pwa1"]
-[ext_resource type="Texture2D" path="res://Actors/Zombies/Sun_20.png" id="21_3qo8e"]
-[ext_resource type="Texture2D" path="res://Actors/Zombies/Sun_21.png" id="22_ephao"]
+[ext_resource type="Texture2D" uid="uid://cbpbr61mljsfn" path="res://Scenes/Sun/Sun_3.png" id="5_tee4h"]
+[ext_resource type="Texture2D" uid="uid://dwfbuk44i5ow7" path="res://Scenes/Sun/Sun_4.png" id="6_c2egd"]
+[ext_resource type="Texture2D" uid="uid://1e5fw7w5yklm" path="res://Scenes/Sun/Sun_5.png" id="7_y81lf"]
+[ext_resource type="Texture2D" uid="uid://ds55odo6uliyu" path="res://Scenes/Sun/Sun_6.png" id="8_vhm4y"]
+[ext_resource type="Texture2D" uid="uid://0ncnb8c1sk5v" path="res://Scenes/Sun/Sun_7.png" id="9_qfr4h"]
+[ext_resource type="Texture2D" uid="uid://cw7iw3fc1b8x8" path="res://Scenes/Sun/Sun_8.png" id="10_i00go"]
+[ext_resource type="Texture2D" uid="uid://c4c7p2qrdonfx" path="res://Scenes/Sun/Sun_9.png" id="11_2jnkn"]
+[ext_resource type="Texture2D" uid="uid://dpfajudhlogvg" path="res://Scenes/Sun/Sun_10.png" id="12_g0145"]
+[ext_resource type="Texture2D" uid="uid://du3g6sty482mq" path="res://Scenes/Sun/Sun_11.png" id="13_k3g2q"]
+[ext_resource type="Texture2D" uid="uid://jmqlpremn27l" path="res://Scenes/Sun/Sun_12.png" id="14_grwkj"]
+[ext_resource type="Texture2D" uid="uid://gpvr2yjxu5pw" path="res://Scenes/Sun/Sun_13.png" id="15_1s14a"]
+[ext_resource type="Texture2D" uid="uid://bl48mjfir70eb" path="res://Scenes/Sun/Sun_14.png" id="16_p86yo"]
+[ext_resource type="Texture2D" uid="uid://b7lt1chm0kgsj" path="res://Scenes/Sun/Sun_15.png" id="17_hffkm"]
+[ext_resource type="Texture2D" uid="uid://btbh6go86nwnn" path="res://Scenes/Sun/Sun_21.png" id="18_iccsv"]
+[ext_resource type="Texture2D" uid="uid://d2xcls53c2qy" path="res://Scenes/Sun/Sun_16.png" id="19_r28uk"]
+[ext_resource type="Texture2D" uid="uid://gbhfm8f4ku4p" path="res://Scenes/Sun/Sun_17.png" id="20_i0ryh"]
+[ext_resource type="Texture2D" uid="uid://ck4gm6qn3wo5a" path="res://Scenes/Sun/Sun_18.png" id="21_mgtxh"]
+[ext_resource type="Texture2D" uid="uid://dpgewhnsjwlrm" path="res://Scenes/Sun/Sun_19.png" id="22_mgi5f"]
+[ext_resource type="Texture2D" uid="uid://2qbou4q1mnkk" path="res://Scenes/Sun/Sun_20.png" id="23_sbhiv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dp1f2"]
 animations = [{
@@ -37,61 +37,61 @@ animations = [{
 "texture": ExtResource("3_mt6aj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_3sh5w")
+"texture": ExtResource("5_tee4h")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_ynqc7")
+"texture": ExtResource("6_c2egd")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_4va1n")
+"texture": ExtResource("7_y81lf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_ipinh")
+"texture": ExtResource("8_vhm4y")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_sbgsf")
+"texture": ExtResource("9_qfr4h")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_hk2go")
+"texture": ExtResource("10_i00go")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_ykxft")
+"texture": ExtResource("11_2jnkn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_ao8vt")
+"texture": ExtResource("12_g0145")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_0svrk")
+"texture": ExtResource("13_k3g2q")
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_hy8nb")
+"texture": ExtResource("14_grwkj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("14_kv8vn")
+"texture": ExtResource("15_1s14a")
 }, {
 "duration": 1.0,
-"texture": ExtResource("15_2mcbw")
+"texture": ExtResource("16_p86yo")
 }, {
 "duration": 1.0,
-"texture": ExtResource("16_h0jo2")
+"texture": ExtResource("17_hffkm")
 }, {
 "duration": 1.0,
-"texture": ExtResource("17_mtgio")
+"texture": ExtResource("18_iccsv")
 }, {
 "duration": 1.0,
-"texture": ExtResource("18_52ol8")
+"texture": ExtResource("19_r28uk")
 }, {
 "duration": 1.0,
-"texture": ExtResource("19_xbbuv")
+"texture": ExtResource("20_i0ryh")
 }, {
 "duration": 1.0,
-"texture": ExtResource("20_5pwa1")
+"texture": ExtResource("21_mgtxh")
 }, {
 "duration": 1.0,
-"texture": ExtResource("21_3qo8e")
+"texture": ExtResource("22_mgi5f")
 }, {
 "duration": 1.0,
-"texture": ExtResource("22_ephao")
+"texture": ExtResource("23_sbhiv")
 }],
 "loop": true,
 "name": &"default",
@@ -109,7 +109,7 @@ script = ExtResource("1_4b4c1")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_dp1f2")
 autoplay = "default"
-frame_progress = 0.0554553
+frame_progress = 0.9620412
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_og215")

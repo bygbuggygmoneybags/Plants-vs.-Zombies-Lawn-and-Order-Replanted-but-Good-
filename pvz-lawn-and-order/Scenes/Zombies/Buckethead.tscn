@@ -1,6 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://ds6u2vcdgpivr"]
 
-[ext_resource type="Script" uid="uid://bi0ubmptr5shs" path="res://Actors/Zombies/Buckethead.cs" id="1_r48gy"]
+[ext_resource type="Script" uid="uid://bi0ubmptr5shs" path="res://Scripts/Zombies/Buckethead.cs" id="1_r48gy"]
 
 [node name="Buckethead" type="Node2D"]
 script = ExtResource("1_r48gy")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
