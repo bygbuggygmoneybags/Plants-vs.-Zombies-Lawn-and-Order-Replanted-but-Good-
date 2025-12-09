@@ -5,6 +5,7 @@ var zf
 var vel = Vector2(0.3, -6)
 var score = 0
 @onready var tween = create_tween()
+signal score_changed(new_score: int)
 
 
 # Called when the node enters the scene tree for the first time.
@@ -44,6 +45,7 @@ func _process(_delta):
 func collected_success():
 	score+=25
 	queue_free()
+	score_changed.emit(score)
 
 
 func _on_input_event(_viewport, event, _shape_idx):

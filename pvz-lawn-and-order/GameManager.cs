@@ -9,6 +9,9 @@ namespace pvzlawnandorder
 		public List<List<Zombie>> ZombiesInLane = new();
 		[Export] public PackedScene Sun { get; set; }
 		private Timer sunTime;
+		int score = 0;
+		Node sun;
+
 
 		public override void _Ready()
 		{
@@ -19,13 +22,15 @@ namespace pvzlawnandorder
 				ZombiesInLane.Add(new List<Zombie>());
 			}
 		}
+		
 		public override void _Process(double delta)
 		{
+			score = sun.Get("score").AsInt32();
 		}
 
 		private void SpawnSky()
 		{
-			Node sun = Sun.Instantiate();
+			sun = Sun.Instantiate();
 			GetTree().CurrentScene.AddChild(sun);
 
 			sun.Call("init_sky");
