@@ -1,11 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://cawr0m0xqx16b"]
+[gd_scene load_steps=5 format=4 uid="uid://cawr0m0xqx16b"]
 
 [ext_resource type="TileSet" uid="uid://nr4ykmp1oxnn" path="res://TileSet.tres" id="1_v1qfn"]
 [ext_resource type="Script" uid="uid://uk5qtdfgxbj7" path="res://GameManager.cs" id="3_6whob"]
 [ext_resource type="Script" uid="uid://cn2vih3ivr6hi" path="res://sunLabel.cs" id="4_6whob"]
 [ext_resource type="PackedScene" uid="uid://y3ylln7i2sqn" path="res://Scenes/Sun/sun.tscn" id="4_u7krg"]
-
-[sub_resource type="TileSet" id="TileSet_6whob"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -14,10 +12,6 @@
 [node name="SunTimer" type="Timer" parent="GameManager"]
 wait_time = 5.0
 autostart = true
-
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAACAAAAAAAAAAAAAAACAAEAAAABAAAAAAADAAEAAAAAAAAAAAAEAAAAAAAAAAAAAAAFAAAAAAABAAAAAAAGAAAAAAAAAAAAAAAHAAAAAAABAAAAAAAHAAQAAAABAAAAAAAGAAQAAAAAAAAAAAAFAAQAAAABAAAAAAAEAAQAAAAAAAAAAAADAAQAAAABAAAAAAACAAQAAAAAAAAAAAABAAQAAAABAAAAAAAAAAQAAAAAAAAAAAAHAAIAAAABAAAAAAAGAAIAAAAAAAAAAAAFAAIAAAABAAAAAAAEAAIAAAAAAAAAAAACAAIAAAAAAAAAAAABAAIAAAABAAAAAAAAAAIAAAAAAAAAAAAAAAEAAAABAAAAAAABAAEAAAAAAAAAAAAEAAEAAAABAAAAAAAFAAEAAAAAAAAAAAAGAAEAAAABAAAAAAAHAAEAAAAAAAAAAAAAAAMAAAABAAAAAAABAAMAAAAAAAAAAAACAAMAAAABAAAAAAADAAMAAAAAAAAAAAAEAAMAAAABAAAAAAAFAAMAAAAAAAAAAAAGAAMAAAABAAAAAAAHAAMAAAAAAAAAAAADAAIAAAABAAAAAAABAAAAAAABAAAAAAADAAAAAAABAAAAAAAIAAAAAAAAAAAAAAAIAAEAAAABAAAAAAAIAAIAAAAAAAAAAAAIAAMAAAABAAAAAAAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=")
-tile_set = SubResource("TileSet_6whob")
 
 [node name="Node2D" type="Node2D" parent="."]
 script = ExtResource("3_6whob")
