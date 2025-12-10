@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\G$$$\\Documents\\pvz-lawn-and-order\\Plants-vs.-Zombies-Lawn-and-Order-Replanted-but-Good-\\pvz-lawn-and-order\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|c:\\users\\g$$$\\documents\\pvz-lawn-and-order\\plants-vs.-zombies-lawn-and-order-replanted-but-good-\\pvz-lawn-and-order\\sunlabel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|solutionrelative:sunlabel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|c:\\users\\g$$$\\documents\\pvz-lawn-and-order\\plants-vs.-zombies-lawn-and-order-replanted-but-good-\\pvz-lawn-and-order\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|solutionrelative:gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|c:\\users\\g$$$\\documents\\pvz-lawn-and-order\\plants-vs.-zombies-lawn-and-order-replanted-but-good-\\pvz-lawn-and-order\\scripts\\plants\\plant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|solutionrelative:scripts\\plants\\plant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|c:\\users\\g$$$\\documents\\pvz-lawn-and-order\\plants-vs.-zombies-lawn-and-order-replanted-but-good-\\pvz-lawn-and-order\\scripts\\plants\\plantfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|solutionrelative:scripts\\plants\\plantfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|c:\\users\\g$$$\\documents\\pvz-lawn-and-order\\plants-vs.-zombies-lawn-and-order-replanted-but-good-\\pvz-lawn-and-order\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|solutionrelative:gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{437E081F-55FA-48C5-82C4-DB40E40C7C71}|pvz-lawn and order.csproj|c:\\users\\g$$$\\documents\\pvz-lawn-and-order\\plants-vs.-zombies-lawn-and-order-replanted-but-good-\\pvz-lawn-and-order\\scripts\\plants\\sunflower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,17 +42,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Users\\G$$$\\Documents\\pvz-lawn-and-order\\Plants-vs.-Zombies-Lawn-and-Order-Replanted-but-Good-\\pvz-lawn-and-order\\GameManager.cs",
               "RelativeDocumentMoniker": "GameManager.cs",
               "ToolTip": "C:\\Users\\G$$$\\Documents\\pvz-lawn-and-order\\Plants-vs.-Zombies-Lawn-and-Order-Replanted-but-Good-\\pvz-lawn-and-order\\GameManager.cs",
               "RelativeToolTip": "GameManager.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAgwC8AAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-05T05:45:05.656Z",
               "IsPinned": true,
@@ -56,7 +60,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
+              "Title": "sunLabel.cs",
+              "DocumentMoniker": "C:\\Users\\G$$$\\Documents\\pvz-lawn-and-order\\Plants-vs.-Zombies-Lawn-and-Order-Replanted-but-Good-\\pvz-lawn-and-order\\sunLabel.cs",
+              "RelativeDocumentMoniker": "sunLabel.cs",
+              "ToolTip": "C:\\Users\\G$$$\\Documents\\pvz-lawn-and-order\\Plants-vs.-Zombies-Lawn-and-Order-Replanted-but-Good-\\pvz-lawn-and-order\\sunLabel.cs",
+              "RelativeToolTip": "sunLabel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T01:13:06.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Peashooter.cs",
               "DocumentMoniker": "C:\\Users\\G$$$\\Documents\\pvz-lawn-and-order\\Plants-vs.-Zombies-Lawn-and-Order-Replanted-but-Good-\\pvz-lawn-and-order\\Scripts\\Plants\\RangedPlants\\Peashooter.cs",
               "RelativeDocumentMoniker": "Scripts\\Plants\\RangedPlants\\Peashooter.cs",
@@ -68,7 +85,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Sunflower.cs",
               "DocumentMoniker": "C:\\Users\\G$$$\\Documents\\pvz-lawn-and-order\\Plants-vs.-Zombies-Lawn-and-Order-Replanted-but-Good-\\pvz-lawn-and-order\\Scripts\\Plants\\Sunflower.cs",
               "RelativeDocumentMoniker": "Scripts\\Plants\\Sunflower.cs",
@@ -76,12 +93,11 @@
               "RelativeToolTip": "Scripts\\Plants\\Sunflower.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-08T15:49:03.594Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-08T15:49:03.594Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "PlantFood.cs",
               "DocumentMoniker": "C:\\Users\\G$$$\\Documents\\pvz-lawn-and-order\\Plants-vs.-Zombies-Lawn-and-Order-Replanted-but-Good-\\pvz-lawn-and-order\\Scripts\\Plants\\PlantFood.cs",
               "RelativeDocumentMoniker": "Scripts\\Plants\\PlantFood.cs",
@@ -89,12 +105,11 @@
               "RelativeToolTip": "Scripts\\Plants\\PlantFood.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAA1wBQAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-08T15:36:23.386Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-08T15:36:23.386Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Plant.cs",
               "DocumentMoniker": "C:\\Users\\G$$$\\Documents\\pvz-lawn-and-order\\Plants-vs.-Zombies-Lawn-and-Order-Replanted-but-Good-\\pvz-lawn-and-order\\Scripts\\Plants\\Plant.cs",
               "RelativeDocumentMoniker": "Scripts\\Plants\\Plant.cs",
@@ -102,12 +117,11 @@
               "RelativeToolTip": "Scripts\\Plants\\Plant.cs",
               "ViewState": "AgIAAD0AAAAAAAAAAAAQwFMAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-05T06:24:36.827Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-05T06:24:36.827Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Tiles.cs",
               "DocumentMoniker": "C:\\Users\\G$$$\\Documents\\pvz-lawn-and-order\\Plants-vs.-Zombies-Lawn-and-Order-Replanted-but-Good-\\pvz-lawn-and-order\\GenMechanics\\Tiles.cs",
               "RelativeDocumentMoniker": "GenMechanics\\Tiles.cs",
@@ -119,7 +133,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "PlantTiles.cs",
               "DocumentMoniker": "C:\\Users\\G$$$\\Documents\\pvz-lawn-and-order\\Plants-vs.-Zombies-Lawn-and-Order-Replanted-but-Good-\\pvz-lawn-and-order\\GenMechanics\\PlantTiles.cs",
               "RelativeDocumentMoniker": "GenMechanics\\PlantTiles.cs",
