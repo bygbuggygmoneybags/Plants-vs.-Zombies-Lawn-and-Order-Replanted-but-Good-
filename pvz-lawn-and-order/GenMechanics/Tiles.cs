@@ -20,17 +20,17 @@ namespace pvzlawnandorder
 		private static readonly Vector2I MyTileAtlasCoords = new Vector2I(0,0);
 
 
-        public override void _UnhandledInput(InputEvent @event)
-        {
-            if(@event is InputEventMouseButton mouseButtonEvent && mouseButtonEvent.ButtonIndex == MouseButton.Left && mouseButtonEvent.Pressed)
+		public override void _UnhandledInput(InputEvent @event)
+		{
+			if(@event is InputEventMouseButton mouseButtonEvent && mouseButtonEvent.ButtonIndex == MouseButton.Left && mouseButtonEvent.Pressed)
 			{
-                Vector2 mousePos = GetViewport().GetMousePosition();
-                Vector2 worldPos = GetGlobalMousePosition();
-                Vector2I cell = LocalToMap(worldPos);
+				Vector2 mousePos = GetViewport().GetMousePosition();
+				Vector2 worldPos = GetGlobalMousePosition();
+				Vector2I cell = LocalToMap(worldPos);
 
 				gameManager.TryPlacePlant(cell);
-            }
-        }
+			}
+		}
 		public override void _Ready()
 		{
 			gameManager = GetParent<GameManager>();
