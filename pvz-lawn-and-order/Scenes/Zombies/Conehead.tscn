@@ -1,8 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://be6dyfsf8ymvl"]
+[gd_scene load_steps=3 format=3 uid="uid://be6dyfsf8ymvl"]
 
 [ext_resource type="Script" uid="uid://ddi11261tskux" path="res://Scripts/Zombies/Conehead.cs" id="1_t2mdd"]
+[ext_resource type="Texture2D" uid="uid://tekhqra1iycb" path="res://PNGs/AwfulConeHead.png" id="2_0me4q"]
 
 [node name="Conehead" type="Node2D"]
 script = ExtResource("1_t2mdd")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(779, 387)
+scale = Vector2(5.65625, 5.4375)
+texture = ExtResource("2_0me4q")

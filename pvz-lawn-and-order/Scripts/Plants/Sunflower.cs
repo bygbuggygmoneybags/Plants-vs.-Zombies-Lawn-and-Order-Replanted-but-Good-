@@ -14,7 +14,7 @@ namespace pvzlawnandorder
 			MaxHealth = 300;
 			Health = MaxHealth;
 			SunCost = 50;
-			Type = "Sunflower";
+			PlantType = "Sunflower";
 			produceTime = GetNode<Timer>("ProductionTimer");
 			produceTime.Timeout += ProduceSun;
 		}

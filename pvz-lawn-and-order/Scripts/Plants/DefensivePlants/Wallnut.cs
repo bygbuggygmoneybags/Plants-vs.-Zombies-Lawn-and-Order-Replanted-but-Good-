@@ -14,7 +14,7 @@ namespace pvzlawnandorder.Plants
             MaxHealth = 4000;
             Health = MaxHealth;
             SunCost = 50;
-            Type = "Wall-Nut";
+            PlantType = "Wall-Nut";
             Stages = 2;
         }
 

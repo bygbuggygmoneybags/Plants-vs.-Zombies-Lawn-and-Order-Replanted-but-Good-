@@ -1,8 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://bkdvvrj4ewya7"]
+[gd_scene load_steps=3 format=3 uid="uid://bkdvvrj4ewya7"]
 
 [ext_resource type="Script" uid="uid://dvxmrtrrj6uki" path="res://Scripts/Plants/RangedPlants/Peashooter.cs" id="1_rxlll"]
+[ext_resource type="Texture2D" uid="uid://h5eplg3c2ee7" path="res://PNGs/Peashooter.png" id="2_u6h24"]
 
 [node name="Peashooter" type="Node2D"]
 script = ExtResource("1_rxlll")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(592, 333)
+scale = Vector2(5.234375, 5.203125)
+texture = ExtResource("2_u6h24")

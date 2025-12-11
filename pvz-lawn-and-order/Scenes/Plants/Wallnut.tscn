@@ -1,8 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://dwlfpginmxg6b"]
+[gd_scene load_steps=3 format=3 uid="uid://dwlfpginmxg6b"]
 
 [ext_resource type="Script" uid="uid://cpnakl8x7rbak" path="res://Scripts/Plants/DefensivePlants/Wallnut.cs" id="1_lwvji"]
+[ext_resource type="Texture2D" uid="uid://dvtvi4n025hq8" path="res://PNGs/Walnutish.png" id="2_7ptll"]
 
 [node name="Wallnut" type="Node2D"]
 script = ExtResource("1_lwvji")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(664.00006, 329)
+scale = Vector2(5.828125, 5.984375)
+texture = ExtResource("2_7ptll")

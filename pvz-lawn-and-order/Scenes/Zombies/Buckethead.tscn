@@ -1,8 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://ds6u2vcdgpivr"]
+[gd_scene load_steps=3 format=3 uid="uid://ds6u2vcdgpivr"]
 
 [ext_resource type="Script" uid="uid://bi0ubmptr5shs" path="res://Scripts/Zombies/Buckethead.cs" id="1_r48gy"]
+[ext_resource type="Texture2D" uid="uid://181108edv0xp" path="res://PNGs/AwfulBucketHead.png" id="2_gjx87"]
 
 [node name="Buckethead" type="Node2D"]
 script = ExtResource("1_r48gy")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(701.5, 328.5)
+scale = Vector2(5.640625, 5.265625)
+texture = ExtResource("2_gjx87")

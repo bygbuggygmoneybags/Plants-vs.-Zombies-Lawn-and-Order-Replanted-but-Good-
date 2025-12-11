@@ -52,7 +52,7 @@ namespace pvzlawnandorder.Plants
             Damage = 20;
             Cooldown = 1.425f;
             SunCost = 200;
-            Type = "Repeater";
+            PlantType = "Repeater";
             NumProjectiles = 2;
             SpreadAngle = 0;
             ProjectileSpeed = 30f;
@@ -64,7 +64,7 @@ namespace pvzlawnandorder.Plants
         {
             base._Process(delta);
 
-            ZombieInLane = Game.ZombiesInLane[Lane].Any(z => z.GlobalPosition.X > GlobalPosition.X);
+            ZombieInLane = GameScript.ZombiesInLane[Lane].Any(z => z.GlobalPosition.X > GlobalPosition.X);
         }
     }
 }

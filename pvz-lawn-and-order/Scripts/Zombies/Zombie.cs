@@ -12,7 +12,7 @@ namespace pvzlawnandorder
     {
         protected AnimationPlayer animPlay;
         protected Vector2I Location { get; set; }
-        protected GameManager Game { get; set; }
+        protected GameManager GameScript { get; set; }
         protected int MaxHealth { get; set; }
         protected int Health {  get; set; }
         protected int ExtraHealth { get; set; }
@@ -53,12 +53,12 @@ namespace pvzlawnandorder
             Damage = 100;
             Speed = 4.7f;
             ExtraHealth = 89;
-            Game.AddZombie(this);
+            GameScript.AddZombie(this);
         }
 
         public override void _ExitTree()
         {
-            Game.RemoveZombie(this);
+            GameScript.RemoveZombie(this);
         }
 
         public void TakeDamage(int damage)

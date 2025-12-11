@@ -14,15 +14,18 @@ namespace pvzlawnandorder
         protected AnimationPlayer animPlay;
         public PackedScene Self { get; set; }
         protected Vector2I Location { get; set; }
-        protected GameManager Game { get; set; }
+        protected Node2D Game { get; set; }
+        protected PackedScene MainScene { get; set; }
+        protected GameManager GameScript { get; set; }
         protected int Health {  get; set; }
         protected int MaxHealth { get; set; }
-        protected int SunCost { get; set; }
-        protected string Type { get; set; }
+        public int SunCost { get; set; }
+        public string PlantType { get; set; }
         protected int Damage { get; set; }
         protected int Lane { get; set; }
         protected float Cooldown { get; set; }
         protected float timer = 0f;
+        protected Node MainInstance { get; set; }
         public PlantFood Food { get; set; }
         public bool isFed => Food != null;
         protected bool IsAlive => Health > 0;
@@ -55,10 +58,8 @@ namespace pvzlawnandorder
             }    
         }
 
-        protected void OnPlant(Vector2I location, GameManager game)
+        protected void OnPlant()
         {
-            Location = location;
-            Game = game;
             Lane = Location.Y;
 
             animPlay.AnimationFinished += OnSpawnFinish;
@@ -81,7 +82,7 @@ namespace pvzlawnandorder
                         var duplicate = Self.Instantiate<Plant>();
                         var parent = GetParent() ?? GetTree().CurrentScene;
                         parent.AddChild(duplicate);
-                        duplicate.OnPlant(Location + new Vector2I(50, 0), Game);
+                        duplicate.OnPlant();
                         break;
                 }
             }
@@ -110,6 +111,10 @@ namespace pvzlawnandorder
 
         public override void _Ready()
         {
+            MainScene = GD.Load<PackedScene>("res://Scenes/node_2d.tscn");
+            MainInstance = MainScene.Instantiate<Node>();
+            AddChild(MainInstance);
+            Game = MainInstance.GetNode<Node2D>("Main Node");
             animPlay = GetNode<AnimationPlayer>("AnimationPlayer");
         }
     }

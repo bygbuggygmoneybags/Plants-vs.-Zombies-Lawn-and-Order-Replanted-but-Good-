@@ -23,7 +23,7 @@ namespace pvzlawnandorder.Plants
         {
             if (ZombieInLane && CanAttack)
             {
-                var zombsInLane = Game.ZombiesInLane[Lane];
+                var zombsInLane = GameScript.ZombiesInLane[Lane];
 
                 Zombie target = zombsInLane.Where(z => z.GlobalPosition.X > GlobalPosition.X).OrderBy(z => z.GlobalPosition.X).FirstOrDefault();
 
@@ -54,7 +54,7 @@ namespace pvzlawnandorder.Plants
             Damage = 40;
             Cooldown = 2.925f;
             SunCost = 100;
-            Type = "Cabbage-Pult";
+            PlantType = "Cabbage-Pult";
             NumProjectiles = 1;
             SpreadAngle = 0;
             ProjectileSpeed = 20f;
@@ -66,7 +66,7 @@ namespace pvzlawnandorder.Plants
         {
             base._Process(delta);
 
-            ZombieInLane = Game.ZombiesInLane[Lane].Any(z => z.GlobalPosition.X > GlobalPosition.X);
+            ZombieInLane = GameScript.ZombiesInLane[Lane].Any(z => z.GlobalPosition.X > GlobalPosition.X);
         }
     }
 }
