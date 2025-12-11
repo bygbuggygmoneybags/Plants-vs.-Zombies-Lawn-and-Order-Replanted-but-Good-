@@ -29,7 +29,9 @@ namespace pvzlawnandorder
 		
 		public override void _Process(double delta)
 		{
-			score = sun.Get("score").AsInt32();
+			if(sun != null){
+				score = sun.Get("score").AsInt32();
+			}
 		}
 
 		private void SpawnSky()

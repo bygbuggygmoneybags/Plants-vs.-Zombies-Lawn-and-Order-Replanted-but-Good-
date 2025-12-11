@@ -36,12 +36,6 @@ func init_sunflower(x, y):
 	tween = tween.set_loops()
 	self.tween.tween_callback(self.throw).set_delay(0.01)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
-	pass
-
-
 func collected_success():
 	score+=25
 	queue_free()
