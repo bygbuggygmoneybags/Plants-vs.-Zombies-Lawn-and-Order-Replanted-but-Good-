@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://cawr0m0xqx16b"]
+[gd_scene load_steps=12 format=4 uid="uid://cawr0m0xqx16b"]
 
 [ext_resource type="TileSet" uid="uid://nr4ykmp1oxnn" path="res://TileSet.tres" id="1_v1qfn"]
 [ext_resource type="Script" uid="uid://uk5qtdfgxbj7" path="res://GameManager.cs" id="3_6whob"]
@@ -10,11 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dhaniu4gjkaw0" path="res://Scenes/Plants/CabbagePult.tscn" id="6_he4j0"]
 [ext_resource type="PackedScene" uid="uid://cn6o7c586exhr" path="res://Scenes/Plants/Sunflower.tscn" id="7_85gyg"]
 [ext_resource type="PackedScene" uid="uid://dwlfpginmxg6b" path="res://Scenes/Plants/Wallnut.tscn" id="8_c32x4"]
-[ext_resource type="PackedScene" uid="uid://bic2udqsbk8oy" path="res://Scenes/Zombies/Imp.tscn" id="9_c32x4"]
 [ext_resource type="Script" uid="uid://bxbuv8ana20gy" path="res://GenMechanics/Tiles.cs" id="10_fg7i4"]
-[ext_resource type="PackedScene" uid="uid://ds6u2vcdgpivr" path="res://Scenes/Zombies/Buckethead.tscn" id="10_gwne5"]
-[ext_resource type="PackedScene" uid="uid://be6dyfsf8ymvl" path="res://Scenes/Zombies/Conehead.tscn" id="11_hpu6p"]
-[ext_resource type="PackedScene" uid="uid://dqojw4vwek78n" path="res://Scenes/Zombies/Zombie.tscn" id="12_op2xg"]
 
 [node name="Main Node" type="Node2D"]
 script = ExtResource("3_6whob")
@@ -25,10 +21,6 @@ Repeat = ExtResource("5_p20hg")
 CPult = ExtResource("6_he4j0")
 SFlow = ExtResource("7_85gyg")
 WNut = ExtResource("8_c32x4")
-ImpScene = ExtResource("9_c32x4")
-BucketScene = ExtResource("10_gwne5")
-ConeScene = ExtResource("11_hpu6p")
-NormalScene = ExtResource("12_op2xg")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(287, 141)

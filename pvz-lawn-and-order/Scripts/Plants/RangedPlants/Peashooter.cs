@@ -26,9 +26,9 @@ namespace pvzlawnandorder
 				{
 					Area2D pea = PeaProj.Instantiate<Area2D>();
 
-                    GetTree().CurrentScene.AddChild(pea);
-                    pea.GlobalPosition = GlobalPosition;
-                    
+					GetTree().CurrentScene.AddChild(pea);
+					pea.GlobalPosition = GlobalPosition;
+					
 					if (pea is Projectiles projectile)
 					{
 						projectile.Damage = Damage;

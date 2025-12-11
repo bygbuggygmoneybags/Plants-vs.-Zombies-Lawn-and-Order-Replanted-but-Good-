@@ -14,7 +14,7 @@ namespace pvzlawnandorder
 		private GameManager gameManager;
 
 		[Export] private TileSet tileSetResource;
-        public HashSet<Vector2I> PlantableCells { get; private set; } = new();
+		public HashSet<Vector2I> PlantableCells { get; private set; } = new();
 
 
 		public override void _UnhandledInput(InputEvent @event)
@@ -46,12 +46,12 @@ namespace pvzlawnandorder
 			{
 				for (int y = 0; y < gridHeight; y++)
 				{
-                    Vector2I cellCoords = new Vector2I(x, y);
-                    tileAtlasCoords = (x + y) % 2 == 0 ? new Vector2I(0, 0) : new Vector2I(1, 0);
-                    SetCell(cellCoords, tileSourceId, tileAtlasCoords);
+					Vector2I cellCoords = new Vector2I(x, y);
+					tileAtlasCoords = (x + y) % 2 == 0 ? new Vector2I(0, 0) : new Vector2I(1, 0);
+					SetCell(cellCoords, tileSourceId, tileAtlasCoords);
 					TileData tileData = GetCellTileData(cellCoords);
-                    PlantableCells.Add(cellCoords);
-                }
+					PlantableCells.Add(cellCoords);
+				}
 			}
 		}
 	}
