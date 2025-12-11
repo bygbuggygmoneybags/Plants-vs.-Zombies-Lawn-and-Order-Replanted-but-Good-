@@ -2,7 +2,7 @@ using Godot;
 using pvzlawnandorder;
 
 
-	public partial class ScoreLabel : Label
+	public partial class sunLabel : Label
 	{
 		private GameManager _gameManager;
 
@@ -28,7 +28,7 @@ using pvzlawnandorder;
 		{
 			if (_gameManager != null)
 			{
-				Text = $"Score: {_gameManager.Get("score").AsInt32()}";
+				Text = $"Sun: {_gameManager.score}";
 			}
 		}
 	}

@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://uk5qtdfgxbj7" path="res://GameManager.cs" id="3_6whob"]
 [ext_resource type="PackedScene" uid="uid://ctyq45cc86af6" path="res://Scenes/Plants/PlantFood.tscn" id="3_u7krg"]
 [ext_resource type="PackedScene" uid="uid://bkdvvrj4ewya7" path="res://Scenes/Plants/Peashooter.tscn" id="4_2ooml"]
-[ext_resource type="Script" uid="uid://cn2vih3ivr6hi" path="res://sunLabel.cs" id="4_6whob"]
+[ext_resource type="Script" uid="uid://v2fpjgto5unq" path="res://sunLabel.cs" id="4_6whob"]
 [ext_resource type="PackedScene" uid="uid://y3ylln7i2sqn" path="res://Scenes/Sun/sun.tscn" id="4_u7krg"]
 [ext_resource type="PackedScene" uid="uid://clipj26sjclec" path="res://Scenes/Plants/Repeater.tscn" id="5_p20hg"]
 [ext_resource type="PackedScene" uid="uid://dhaniu4gjkaw0" path="res://Scenes/Plants/CabbagePult.tscn" id="6_he4j0"]
@@ -21,11 +21,21 @@ Repeat = ExtResource("5_p20hg")
 CPult = ExtResource("6_he4j0")
 SFlow = ExtResource("7_85gyg")
 WNut = ExtResource("8_c32x4")
+script = ExtResource("3_6whob")
+Sun = ExtResource("4_u7krg")
+PlantFood = ExtResource("3_u7krg")
+
+[node name="FoodTimer" type="Timer" parent="GameManager"]
+wait_time = 120.0
+
+[node name="SunTimer" type="Timer" parent="GameManager"]
+wait_time = 20.0
+autostart = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(288, 141)
+position = Vector2(287, 141)
 offset = Vector2(32, 0)
-zoom = Vector2(1.8, 1.8)
+zoom = Vector2(1.7, 1.8)
 
 [node name="Map" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAAAAAAABQAAAAAAAAABAAAABQABAAAAAAACAAAABQAAAAAAAAACAAEABQABAAAAAAADAAEABQAAAAAAAAADAAAABQABAAAAAAAEAAAABQAAAAAAAAAFAAAABQABAAAAAAAGAAAABQAAAAAAAAAHAAAABQABAAAAAAAIAAAABQAAAAAAAAAIAAIABQAAAAAAAAAIAAMABQABAAAAAAAIAAQABQAAAAAAAAAHAAQABQABAAAAAAAGAAQABQAAAAAAAAAFAAQABQABAAAAAAAEAAQABQAAAAAAAAADAAQABQABAAAAAAACAAQABQAAAAAAAAABAAQABQABAAAAAAAAAAQABQAAAAAAAAAHAAIABQABAAAAAAAGAAIABQAAAAAAAAAFAAIABQABAAAAAAAEAAIABQAAAAAAAAACAAIABQAAAAAAAAABAAIABQABAAAAAAAAAAIABQAAAAAAAAAAAAEABQABAAAAAAABAAEABQAAAAAAAAAEAAEABQABAAAAAAAFAAEABQAAAAAAAAAGAAEABQABAAAAAAAHAAEABQAAAAAAAAAIAAEABQABAAAAAAAAAAMABQABAAAAAAABAAMABQAAAAAAAAACAAMABQABAAAAAAADAAMABQAAAAAAAAAEAAMABQABAAAAAAAFAAMABQAAAAAAAAAGAAMABQABAAAAAAAHAAMABQAAAAAAAAADAAIABQABAAAAAAAAAP//BQACAAAAAAABAP//BQACAAAAAAACAP//BQACAAAAAAADAP//BQACAAAAAAAEAP//BQACAAAAAAAFAP//BQACAAAAAAAGAP//BQACAAAAAAAHAP//BQACAAAAAAAIAP//BQACAAAAAAAJAP//BQACAAAAAAAJAAAABQACAAAAAAAJAAEABQACAAAAAAAJAAIABQACAAAAAAAJAAMABQACAAAAAAAJAAQABQACAAAAAAA=")

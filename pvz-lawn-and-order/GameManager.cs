@@ -17,7 +17,6 @@ namespace pvzlawnandorder
 		[Export] public PackedScene WNut { get; set; }
 
         private Dictionary<Vector2I, Plant> plantGrid = new();
-        private InputEvent place;
 		private Timer foodTime;
 		private Timer sunTime;
 		private Label plantLabel;
@@ -27,7 +26,8 @@ namespace pvzlawnandorder
 		private Button walnut;
 		private Button cabbagepult;
 		private TileMapLayer tiles;
-		int score = 0;
+		private Timer downTime;
+		[Export] public int score = 50;
 		Node sun;
 
 
@@ -55,8 +55,10 @@ namespace pvzlawnandorder
 			plantLabel = GetNode<Label>("SelectLabel");
 
             for (int i = 0; i < 5; i++)
-			{
-				ZombiesInLane.Add(new List<Zombie>());
+			{ 
+			downTime = GetNode<Timer>("DownTimer");
+			downTime.Timeout += ChooseRandomZombie;
+			ZombiesInLane.Add(new List<Zombie>());
 			}
 		}
 		
@@ -69,10 +71,16 @@ namespace pvzlawnandorder
 
 		private void SpawnSky()
 		{
-			sun = Sun.Instantiate();
-			GetTree().CurrentScene.AddChild(sun);
+			var newSun = Sun.Instantiate();
+			GetTree().CurrentScene.AddChild(newSun);
 
-			sun.Call("init_sky");
+			newSun.Call("init_sky");
+
+			newSun.Connect("score_changed", Callable.From<int>((sunScore) =>
+			{
+	   			score += 25;   // This updates the public Score
+				GD.Print("Sun collected! Total score: ", score);
+			}));
 		}
 
 		private void OnTimeout()
@@ -178,5 +186,22 @@ namespace pvzlawnandorder
 		{
 			SelectPlant(CPult);
         }
-    }
+		
+		public void ChooseRandomZombie()
+		{
+			Random rand = new Random();
+			int randomZom = rand.Next(3);
+			randomZom = 0;
+			
+			if(randomZom == 0)
+			{
+				AddZombie(new Buckethead());
+			}else if (randomZom == 2)
+			{
+				AddZombie(new Conehead());
+			}else {
+				AddZombie(new Imp());
+			}
+		}
+	}
 }
