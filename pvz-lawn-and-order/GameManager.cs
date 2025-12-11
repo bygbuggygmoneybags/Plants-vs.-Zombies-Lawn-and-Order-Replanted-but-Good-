@@ -7,7 +7,9 @@ namespace pvzlawnandorder
 	public partial class GameManager : Node
 	{
 		public List<List<Zombie>> ZombiesInLane = new();
-		[Export] public PackedScene Sun { get; set; }
+		public List<List<Plant>> PlantsInLane = new();
+        private Dictionary<Button, PackedScene> plantButtons;
+        [Export] public PackedScene Sun { get; set; }
 		[Export] public PackedScene PlantFood { get; set; }
 		public PackedScene PlantScene { get; set; }
 		public PackedScene ZombieScene { get; set; }
@@ -20,7 +22,7 @@ namespace pvzlawnandorder
 		[Export] public PackedScene BucketScene { get; set; }
 		[Export] public PackedScene ConeScene { get; set; }
 		[Export] public PackedScene NormalScene { get; set; }
-        private Random rand = new Random();
+		private Random rand = new Random();
 
 		private Dictionary<Vector2I, Plant> plantGrid = new();
 		private Timer foodTime;
@@ -31,28 +33,29 @@ namespace pvzlawnandorder
 		private Button repeater;
 		private Button walnut;
 		private Button cabbagepult;
-		private TileMapLayer tiles;
+		private Button SelectedPlantButton;
+		public Tiles tiles;
 		private Timer downTime;
-		[Export] public int score = 50;
+		[Export] public int score = 500;
 		Node sun;
 
 
 		public override void _Ready()
 		{
-            tiles = GetNode<TileMapLayer>("Map");
+			tiles = GetNode<Tiles>("Map");
 
 			sunTime = GetNode<Timer>("SunTimer");
 			sunTime.Timeout += SpawnSky;
 			foodTime = GetNode<Timer>("FoodTimer");
 			foodTime.Timeout += OnTimeout;
-            downTime = GetNode<Timer>("DownTimer");
-            downTime.Timeout += ChooseRandomZombie;
+			downTime = GetNode<Timer>("DownTimer");
+			downTime.Timeout += ChooseRandomZombie;
 
-            peashooter = GetNode<Button>("Peashooter Button");
-            sunflower = GetNode<Button>("Sunflower Button");
-            walnut = GetNode<Button>("Walnut Button");
-            repeater = GetNode<Button>("Repeater Button");
-            cabbagepult = GetNode<Button>("CabbagePult Button");
+			peashooter = GetNode<Button>("Peashooter Button");
+			sunflower = GetNode<Button>("Sunflower Button");
+			walnut = GetNode<Button>("Walnut Button");
+			repeater = GetNode<Button>("Repeater Button");
+			cabbagepult = GetNode<Button>("CabbagePult Button");
 
 			cabbagepult.Pressed += CabbagePult;
 			peashooter.Pressed += Peashooter;
@@ -62,23 +65,42 @@ namespace pvzlawnandorder
 
 			plantLabel = GetNode<Label>("SelectLabel");
 
-			for (int i = 0; i < 5; i++)
-			{ 
-				ZombiesInLane.Add(new List<Zombie>());
+            plantButtons = new Dictionary<Button, PackedScene>()
+{
+				{ peashooter, PShooter },
+				{ sunflower, SFlow },
+				{ repeater, Repeat },
+				{ walnut, WNut },
+				{ cabbagepult, CPult }
+			};
+
+            for (int i = 0; i < 5; i++)
+			{
+                PlantsInLane.Add(new List<Plant>());
+                ZombiesInLane.Add(new List<Zombie>());
 			}
 		}
-		
-		public override void _Process(double delta)
-		{
-			if(sun != null){
-				score = sun.Get("score").AsInt32();
-			}
 
-            if (score < 0)
+        private void UpdatePlantButtons()
+        {
+            foreach (var kvp in plantButtons)
             {
-                score = 0;
+                Button btn = kvp.Key;
+                PackedScene plantScene = kvp.Value;
+                int cost = GetCost(plantScene);
+
+                btn.Disabled = score < cost;
             }
         }
+
+        public override void _Process(double delta)
+		{
+			if (sun != null)
+			{
+				score = sun.Get("score").AsInt32();
+				UpdatePlantButtons();
+			}
+		}
 
 		private void SpawnSky()
 		{
@@ -89,26 +111,26 @@ namespace pvzlawnandorder
 
 			newSun.Connect("score_changed", Callable.From<int>((sunScore) =>
 			{
-	   			score += 25;   // This updates the public Score
+				score += 25;   // This updates the public Score
 				GD.Print("Sun collected! Total score: ", score);
 			}));
 		}
 
 		private void OnTimeout()
 		{
-			SpawnPlantFood(new Vector2((float)GD.RandRange(0,8),(float)GD.RandRange(0,4)));
+			SpawnPlantFood(new Vector2((float)GD.RandRange(0, 8), (float)GD.RandRange(0, 4)));
 		}
 
 		public bool IsCellOccupied(Vector2I cell)
 		{
 			return plantGrid.ContainsKey(cell);
 		}
-		
+
 		private void SpawnPlantFood(Vector2 worldPosition)
 		{
 			Area2D food = (Area2D)PlantFood.Instantiate();
 			GetTree().CurrentScene.AddChild(food);
-			
+
 			food.GlobalPosition = worldPosition;
 		}
 
@@ -122,37 +144,97 @@ namespace pvzlawnandorder
 			ZombiesInLane[zomb.Lane].Remove(zomb);
 		}
 
+		public void AddPlant(Plant plant)
+		{
+			PlantsInLane[plant.Lane].Add(plant);
+		}
+
+		public void RemovePlant(Plant plant)
+		{
+			PlantsInLane[plant.Lane].Remove(plant);
+		}
+
 		private int GetCost(PackedScene plantScene)
 		{
-			var p = plantScene.Instantiate<Plant>();
-			int cost = p.SunCost;
-			p.QueueFree();
+			int cost = int.MaxValue;
+            if (plantScene == null)
+                return int.MaxValue;
+
+			var instance = plantScene.Instantiate();
+			if (instance is not Plant plant)
+			{
+				GD.PrintErr("GetCost: PackedScene does not contain a Plant");
+				return int.MaxValue;
+			}
+			else if (instance is Plant p)
+			{
+				cost = p.SunCost;
+				instance.QueueFree();
+			}
 			return cost;
 		}
 
 		public void TryPlacePlant(Vector2I cell)
 		{
-			if (score < GetCost(PlantScene))
-			{
-				plantLabel.Visible = true;
-				plantLabel.Text = "Not enough sun yet!";
-				PlantScene = null;
-				return;
-			}
+            if (PlantScene == null)
+                return;
 
-			if (IsCellOccupied(cell))
-			{
-				plantLabel.Visible = true;
-				plantLabel.Text = "Occupied! Select another cell!";
-				return;
-			}
+            int cost = GetCost(PlantScene);
 
-			PlacePlant(cell);
-		}
+            if (score < cost)
+            {
+                plantLabel.Visible = true;
+                plantLabel.Text = "Not enough sun!";
+                ClearSelectedPlant();
+                return;
+            }
 
-		public void SelectPlant(PackedScene scene)
+            if (!IsCellPlantable(cell))
+            {
+                plantLabel.Visible = true;
+                plantLabel.Text = "Cell not plantable!";
+                return;
+            }
+
+            PlacePlant(cell);
+            ClearSelectedPlant();
+        }
+
+		private bool IsCellPlantable(Vector2I cell)
 		{
+            if (!tiles.PlantableCells.Contains(cell))
+                return false;
+
+            if (IsCellOccupied(cell))
+                return false;
+
+            return true;
+        }
+
+        public void SelectPlant(PackedScene scene)
+		{
+			int cost = GetCost(scene);
+
+			if (PlantScene == scene)
+			{
+				PlantScene = null;
+				plantLabel.Visible = false;
+				return;
+			}
+
+			if (score < cost)
+			{
+				plantLabel.Visible = true;
+				plantLabel.Text = "Not enough sun!";
+				ClearSelectedPlant();
+				return;
+			}
+
 			PlantScene = scene;
+			plantLabel.Visible = true;
+			plantLabel.Text = "Select a tile to place your plant";
+
+
 		}
 
 		public void SelectZombie(PackedScene scene)
@@ -163,76 +245,109 @@ namespace pvzlawnandorder
 		public void PlacePlant(Vector2I cell)
 		{
 			Plant plant = PlantScene.Instantiate<Plant>();
-			plantLabel.Visible = true;
-			plantLabel.Text = $"Select a tile to place your {plant.PlantType}";
+
+			plant.GameScript = this;
 
 			Vector2 localPos = tiles.MapToLocal(cell);
-			
+
 			tiles.AddChild(plant);
-            plant.Position = localPos;
-            
+			plant.Position = localPos;
+			plant.Lane = (int)localPos.Y;
+
 			plantGrid[cell] = plant;
 
 			score -= plant.SunCost;
 			plant.OnPlant();
 			plantLabel.Visible = false;
-			PlantScene = null;
+			SelectPlant(null);
 		}
 
 		public void SpawnZombie()
 		{
-            int rY = rand.Next(5);
+			int rY = rand.Next(5);
 			Zombie zomb = ZombieScene.Instantiate<Zombie>();
+			zomb.GameScript = this;
 
-			Vector2 localPos = tiles.MapToLocal(new Vector2I(8, rY));
+			Vector2 localPos = tiles.MapToLocal(new Vector2I(9, rY));
 
 			GetParent().AddChild(zomb);
-			zomb.Position = localPos;
-		}
-		public void Sunflower()
+			zomb.GlobalPosition = localPos;
+            zomb.Lane = rY;
+        }
+
+        private void SelectPlantButton(Button button, PackedScene scene)
+        {
+            int cost = GetCost(scene);
+
+            if (score < cost)
+            {
+                plantLabel.Visible = true;
+                plantLabel.Text = "Not enough sun!";
+                ClearSelectedPlant();
+                return;
+            }
+
+            if (SelectedPlantButton != null)
+            {
+                SelectedPlantButton.Disabled = false;
+            }
+
+            SelectedPlantButton = button;
+            SelectPlant(scene);
+        }
+        public void Sunflower()
 		{
-			SelectPlant(SFlow);
+            SelectPlantButton(sunflower, SFlow);
 		}
 
 		public void Peashooter()
 		{
-			SelectPlant(PShooter);
+			SelectPlantButton(peashooter, PShooter);
 		}
 
 		public void Repeater()
 		{
-			SelectPlant(Repeat);
+			SelectPlantButton(repeater, Repeat);
 		}
 
 		public void Wallnut()
 		{
-			SelectPlant(WNut);
+            SelectPlantButton(walnut, WNut);
 		}
 
 		public void CabbagePult()
 		{
-			SelectPlant(CPult);
+			SelectPlantButton(cabbagepult, CPult);
 		}
-		
+
 		public void ChooseRandomZombie()
 		{
 			int randomZom = rand.Next(4);
 
-			if(randomZom == 0)
+			if (randomZom == 0)
 			{
 				SelectZombie(BucketScene);
-			}else if (randomZom == 1)
+			}
+			else if (randomZom == 1)
 			{
 				SelectZombie(ConeScene);
-			}else if (randomZom == 2)
+			}
+			else if (randomZom == 2)
 			{
 				SelectZombie(ImpScene);
-			} else
+			}
+			else
 			{
 				SelectZombie(NormalScene);
 			}
 
 			SpawnZombie();
+		}
+
+		public void ClearSelectedPlant()
+		{
+			PlantScene = null;
+			SelectedPlantButton = null;
 		}
 	}
 }

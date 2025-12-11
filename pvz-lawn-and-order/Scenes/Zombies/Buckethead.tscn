@@ -3,7 +3,9 @@
 [ext_resource type="Script" uid="uid://bi0ubmptr5shs" path="res://Scripts/Zombies/Buckethead.cs" id="1_r48gy"]
 [ext_resource type="Texture2D" uid="uid://181108edv0xp" path="res://PNGs/AwfulBucketHead.png" id="2_gjx87"]
 
-[node name="Buckethead" type="Node2D"]
+[node name="Buckethead" type="Area2D"]
+collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_r48gy")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -11,3 +13,7 @@ script = ExtResource("1_r48gy")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(1, 0.934)
 texture = ExtResource("2_gjx87")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(1, 0.934)
+polygon = PackedVector2Array(-8, -32, -8, -31, -9, -31, -9, -30, -10, -30, -10, -28, -11, -28, -11, -27, -12, -27, -12, -26, -13, -26, -13, -15, -12, -15, -12, -12, -13, -12, -13, -11, -14, -11, -14, -9, -15, -9, -15, -8, -16, -8, -16, -6, -17, -6, -17, -5, -18, -5, -18, -2, -19, -2, -19, 0, -20, 0, -20, 3, -21, 3, -21, 5, -22, 5, -22, 12, -21, 12, -21, 13, -20, 13, -20, 15, -19, 15, -19, 16, -18, 16, -18, 17, -13, 17, -13, 18, -12, 18, -12, 21, -13, 21, -13, 23, -14, 23, -14, 26, -13, 26, -13, 27, -12, 27, -12, 28, -10, 28, -10, 30, -9, 30, -9, 31, -8, 31, -8, 32, -1, 32, -1, 31, 1, 31, 1, 32, 13, 32, 13, 31, 15, 31, 15, 30, 16, 30, 16, 29, 17, 29, 17, 19, 16, 19, 16, 18, 15, 18, 15, 17, 13, 17, 13, 18, 12, 18, 12, 17, 11, 17, 11, 16, 10, 16, 10, 14, 11, 14, 11, 12, 12, 12, 12, 10, 13, 10, 13, 8, 14, 8, 14, 0, 13, 0, 13, -4, 12, -4, 12, -7, 11, -7, 11, -9, 10, -9, 10, -11, 9, -11, 9, -13, 8, -13, 8, -15, 9, -15, 9, -16, 10, -16, 10, -17, 11, -17, 11, -19, 10, -19, 10, -24, 11, -24, 11, -26, 12, -26, 12, -29, 13, -29, 13, -30, 12, -30, 12, -31, 13, -31, 13, -32)

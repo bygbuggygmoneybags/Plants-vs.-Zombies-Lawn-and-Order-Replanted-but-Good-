@@ -4,9 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using pvzlawnandorder.Actors;
 
-namespace pvzlawnandorder.Plants
+namespace pvzlawnandorder
 {
 	public partial class Peashooter : RangedPlant
 	{
@@ -21,13 +20,15 @@ namespace pvzlawnandorder.Plants
 
 		public override void RangedAttack(int numProjectiles, float spreadAngle, float speed, int piercingNum, bool ignoreObstacles, bool zombieInLane)
 		{
-			if (ZombieInLane && CanAttack)
+			if (ZombieInLane)
 			{
 				for (int i = 0; i < numProjectiles; i++)
 				{
-					animPlay?.Play("Attack");
-					Node2D pea = PeaProj.Instantiate<Node2D>();
+					Area2D pea = PeaProj.Instantiate<Area2D>();
 
+                    GetTree().CurrentScene.AddChild(pea);
+                    pea.GlobalPosition = GlobalPosition;
+                    
 					if (pea is Projectiles projectile)
 					{
 						projectile.Damage = Damage;
@@ -35,10 +36,9 @@ namespace pvzlawnandorder.Plants
 						projectile.PierceCount = piercingNum;
 						projectile.Direction = Vector2.Right;
 					}
-
-					GetParent().AddChild(pea);
 				}
 			}
+			timer = 0f;
 		}
 
 		public override void _Ready()
@@ -47,7 +47,7 @@ namespace pvzlawnandorder.Plants
 			MaxHealth = 300;
 			Health = MaxHealth;
 			Damage = 20;
-			Cooldown = 1.425f;
+			Cooldown = 5f;
 			SunCost = 100;
 			PlantType = "Peashooter";
 			NumProjectiles = 1;
@@ -61,7 +61,7 @@ namespace pvzlawnandorder.Plants
 		{
 			base._Process(delta);
 
-			ZombieInLane = GameScript.ZombiesInLane[Lane].Any(z => z.Position.X > Position.X);
+			ZombieInLane = GameScript.ZombiesInLane[Lane].Any(z => z.GlobalPosition.X > GlobalPosition.X);
 		}
 	}
 }

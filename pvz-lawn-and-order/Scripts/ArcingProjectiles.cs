@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Net.Mime.MediaTypeNames;
 
-namespace pvzlawnandorder.Actors
+namespace pvzlawnandorder
 {
     public partial class ArcingProjectiles : Area2D
     {
@@ -20,7 +20,7 @@ namespace pvzlawnandorder.Actors
 
         public override void _Ready()
         {
-            Connect("BodyEntered", new Callable(this, "OnBodyEntered"));
+            AreaEntered += OnBodyEntered;
         }
 
         private void OnBodyEntered(Node body)
@@ -32,7 +32,7 @@ namespace pvzlawnandorder.Actors
             }
         }
 
-        public override void _Process(double delta)
+        public override void _PhysicsProcess(double delta)
         {
             Progress += Speed * (float)delta / 300f;
 
@@ -45,7 +45,7 @@ namespace pvzlawnandorder.Actors
             Vector2 flat = Start.Lerp(Target, Progress);
             float h = -4 * ArcHeight * Progress * (Progress - 1f);
 
-            Position = new Vector2(flat.X, flat.Y - h);
+            GlobalPosition = new Vector2(flat.X, flat.Y - h);
         }
     }
 }

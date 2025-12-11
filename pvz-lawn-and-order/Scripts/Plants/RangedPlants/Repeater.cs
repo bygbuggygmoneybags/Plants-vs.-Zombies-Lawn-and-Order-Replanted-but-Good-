@@ -1,12 +1,11 @@
 using Godot;
-using pvzlawnandorder.Actors;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace pvzlawnandorder.Plants
+namespace pvzlawnandorder
 {
     public partial class Repeater : RangedPlant
     {
@@ -21,25 +20,24 @@ namespace pvzlawnandorder.Plants
 
         public override void RangedAttack(int numProjectiles, float spreadAngle, float speed, int piercingNum, bool ignoreObstacles, bool zombieInLane)
         {
-            if (ZombieInLane && CanAttack)
+            if (ZombieInLane)
             {
                 for (int i = 0; i < numProjectiles; i++)
                 {
-                    animPlay?.Play("Attack");
-                    Node2D rePea = RePeaProj.Instantiate<Node2D>();
+                    Area2D pea = RePeaProj.Instantiate<Area2D>();
+                    GetTree().CurrentScene.AddChild(pea);
+                    pea.GlobalPosition = GlobalPosition;
 
-                    if (rePea is Projectiles projectile)
+                    if (pea is Projectiles projectile)
                     {
                         projectile.Damage = Damage;
                         projectile.Speed = speed;
                         projectile.PierceCount = piercingNum;
-
                         projectile.Direction = Vector2.Right;
                     }
-
-                    GetParent().AddChild(rePea);
                 }
             }
+            timer = 0f;
         }
 
         public override void _Ready()
@@ -62,7 +60,7 @@ namespace pvzlawnandorder.Plants
         {
             base._Process(delta);
 
-            ZombieInLane = GameScript.ZombiesInLane[Lane].Any(z => z.Position.X > Position.X);
+            ZombieInLane = GameScript.ZombiesInLane[Lane].Any(z => z.GlobalPosition.X > GlobalPosition.X);
         }
     }
 }

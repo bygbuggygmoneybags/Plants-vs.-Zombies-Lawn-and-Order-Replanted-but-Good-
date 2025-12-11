@@ -3,7 +3,9 @@
 [ext_resource type="Script" uid="uid://ddi11261tskux" path="res://Scripts/Zombies/Conehead.cs" id="1_t2mdd"]
 [ext_resource type="Texture2D" uid="uid://tekhqra1iycb" path="res://PNGs/AwfulConeHead.png" id="2_0me4q"]
 
-[node name="Conehead" type="Node2D"]
+[node name="Conehead" type="Area2D"]
+collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_t2mdd")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -11,3 +13,7 @@ script = ExtResource("1_t2mdd")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(1, 0.961)
 texture = ExtResource("2_0me4q")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(1, 0.961)
+polygon = PackedVector2Array(-6, -32, -6, -31, -7, -31, -7, -30, -8, -30, -8, -29, -9, -29, -9, -28, -10, -28, -10, -27, -11, -27, -11, -26, -12, -26, -12, -24, -11, -24, -11, -21, -12, -21, -12, -12, -13, -12, -13, -11, -14, -11, -14, -9, -15, -9, -15, -8, -16, -8, -16, -6, -17, -6, -17, -5, -18, -5, -18, -2, -19, -2, -19, 0, -20, 0, -20, 3, -21, 3, -21, 5, -22, 5, -22, 12, -21, 12, -21, 13, -20, 13, -20, 15, -19, 15, -19, 16, -18, 16, -18, 17, -13, 17, -13, 18, -12, 18, -12, 21, -13, 21, -13, 23, -14, 23, -14, 26, -13, 26, -13, 27, -12, 27, -12, 28, -10, 28, -10, 30, -9, 30, -9, 31, -8, 31, -8, 32, -1, 32, -1, 31, 1, 31, 1, 32, 13, 32, 13, 31, 15, 31, 15, 30, 17, 30, 17, 29, 18, 29, 18, 28, 19, 28, 19, 22, 18, 22, 18, 21, 17, 21, 17, 19, 16, 19, 16, 18, 15, 18, 15, 17, 13, 17, 13, 18, 12, 18, 12, 17, 11, 17, 11, 16, 10, 16, 10, 14, 11, 14, 11, 12, 12, 12, 12, 10, 13, 10, 13, 8, 14, 8, 14, 0, 13, 0, 13, -4, 12, -4, 12, -7, 11, -7, 11, -9, 10, -9, 10, -11, 9, -11, 9, -14, 10, -14, 10, -16, 11, -16, 11, -19, 12, -19, 12, -21, 13, -21, 13, -25, 12, -25, 12, -26, 11, -26, 11, -27, 10, -27, 10, -32)

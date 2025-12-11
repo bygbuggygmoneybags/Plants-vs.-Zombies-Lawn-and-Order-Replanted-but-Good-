@@ -8,12 +8,11 @@ using Godot;
 
 namespace pvzlawnandorder
 {
-	public partial class Zombie : Node2D
+	public partial class Zombie : Area2D
 	{
-		protected AnimationPlayer animPlay;
         protected Node2D Game { get; set; }
         protected PackedScene MainScene { get; set; }
-        protected GameManager GameScript { get; set; }
+        public GameManager GameScript { get; set; }
         protected Node MainInstance { get; set; }
         protected int MaxHealth { get; set; }
 		protected int Health {  get; set; }
@@ -28,38 +27,33 @@ namespace pvzlawnandorder
 		protected bool CanAttack => timer >= Cooldown;
 		protected Plant target;
 		protected bool IsAttacking => target != null;
+		private bool IsBlocked = false;
 
-		public override void _Process(double time)
+		public override void _PhysicsProcess(double time)
 		{
 			if (!IsAlive) return;
 
 			timer += (float)time;
-			if (IsAttacking)
-			{
-				if (CanAttack)
-				{
-					Attack();
-					timer = 0f;
-				}
-			} else
-			{
-				Walk((float)time);
-			}
-		}
+
+            if (!IsBlocked)
+            {
+				CheckForPlantInLane();
+                Position += Vector2.Left * Speed * (float)time;
+            }
+            else if (target != null)
+            {
+                Attack();
+            }
+        }
 		public override void _Ready()
 		{
-            animPlay = GetNode<AnimationPlayer>("AnimationPlayer");
-			MaxHealth = 190;
-			Health = MaxHealth;
+            MaxHealth = 190;
+            ExtraHealth = 89;
+            Health = MaxHealth += ExtraHealth;
 			Damage = 100;
-			Speed = 4.7f;
-			ExtraHealth = 89;
+			Speed = 15f;
 			GameScript.AddZombie(this);
-		}
-
-		public override void _ExitTree()
-		{
-			GameScript.RemoveZombie(this);
+			AreaEntered += OnEnterPlantTile;
 		}
 
 		public void TakeDamage(int damage)
@@ -67,50 +61,60 @@ namespace pvzlawnandorder
 			Health -= damage;
 			if (Health <= 0)
 			{
-				animPlay.Play("HeadPop");
-				ExtraHealth -= damage;
-				if (ExtraHealth <= 0)
-				{
-					Die();
-				}
+				Die();
 			}
 		}
 
-		public void Walk(float timeWalk)
+		private void OnEnterPlantTile(Node2D body)
 		{
-			Position += Vector2.Left * Speed * timeWalk;
-		}
-
-		private void OnEnterPlantTile(Area2D area)
-		{
-			if (area.GetParent() is Plant plant)
+			if (body is Plant plant)
 			{
 				StartTarget(plant);
-			}    
-		}
+			}
+        }
 
 		public void StartTarget(Plant plant)
 		{
+			IsBlocked = true;
 			target = plant;
 		}
 
 		public void StopTarget()
 		{
+			IsBlocked = false;
 			target = null;
 		}
 
 		protected void Attack()
 		{
-			if (target != null)
+			if (CanAttack && IsAttacking)
 			{
-				animPlay.Play("Attack");
 				target.TakeDamage(Damage);
+				if(target.Health <= 0)
+				{
+					StopTarget();
+				}
 			}
 		}
 		protected void Die()
 		{
-				animPlay.Play("Death");
-				QueueFree();
+			GameScript.RemoveZombie(this);
+			QueueFree();
 		}
-	}
+
+        private void CheckForPlantInLane()
+        {
+            if (target != null) return;
+
+            foreach (var plant in GameScript.PlantsInLane[Lane])
+            {
+                float distance = GlobalPosition.DistanceTo(plant.GlobalPosition);
+                if (distance <= 32f)
+                {
+                    StartTarget(plant);
+                    break;
+                }
+            }
+        }
+    }
 }

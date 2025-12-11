@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Godot;
 
-namespace pvzlawnandorder.Actors
+namespace pvzlawnandorder
 {
     public partial class Projectiles : Area2D
     {
@@ -16,10 +16,10 @@ namespace pvzlawnandorder.Actors
 
         public override void _Ready()
         {
-            Connect("BodyEntered", new Callable(this, "OnBodyEntered"));
+            AreaEntered += OnBodyEntered;
         }
 
-        private void OnBodyEntered(Node body)
+        private void OnBodyEntered(Node2D body)
         {
             if (body is Zombie zombie)
             {

@@ -4,9 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using pvzlawnandorder.Actors;
 
-namespace pvzlawnandorder.Plants
+namespace pvzlawnandorder
 {
     public partial class CabbagePult : RangedPlant
     {
@@ -34,17 +33,21 @@ namespace pvzlawnandorder.Plants
 
                 for (int i = 0; i < numProjectiles; i++)
                 {
-                    animPlay.Play("Attack");
-                    Node2D cabbage = CabbageProj.Instantiate<Node2D>();
+                    Area2D cabbage = CabbageProj.Instantiate<Area2D>();
+
+                    GetTree().CurrentScene.AddChild(cabbage);
+                    cabbage.GlobalPosition = GlobalPosition;
+
                     if (cabbage is ArcingProjectiles projectile)
                     {
+                        projectile.Target = target.GlobalPosition;
+                        projectile.Start = GlobalPosition;
                         projectile.Damage = Damage;
                         projectile.Speed = speed;
                     }
-
-                    GetParent().AddChild(cabbage);
                 }
             }
+            timer = 0f;
         }
         public override void _Ready()
         {
@@ -66,7 +69,7 @@ namespace pvzlawnandorder.Plants
         {
             base._Process(delta);
 
-            ZombieInLane = GameScript.ZombiesInLane[Lane].Any(z => z.Position.X > Position.X);
+            ZombieInLane = GameScript.ZombiesInLane[Lane].Any(z => z.GlobalPosition.X > GlobalPosition.X);
         }
     }
 }

@@ -1,6 +1,7 @@
 using Godot;
 using Microsoft.VisualBasic;
 using System;
+using System.Collections.Generic;
 
 namespace pvzlawnandorder
 {
@@ -13,11 +14,7 @@ namespace pvzlawnandorder
 		private GameManager gameManager;
 
 		[Export] private TileSet tileSetResource;
-
-		
-
-		private const int MyTileSourceID = -1;
-		private static readonly Vector2I MyTileAtlasCoords = new Vector2I(0,0);
+        public HashSet<Vector2I> PlantableCells { get; private set; } = new();
 
 
 		public override void _UnhandledInput(InputEvent @event)
@@ -53,11 +50,8 @@ namespace pvzlawnandorder
                     tileAtlasCoords = (x + y) % 2 == 0 ? new Vector2I(0, 0) : new Vector2I(1, 0);
                     SetCell(cellCoords, tileSourceId, tileAtlasCoords);
 					TileData tileData = GetCellTileData(cellCoords);
-					if (tileData != null)
-					{
-						tileData.SetCustomData("plantable", true);
-					}
-				}
+                    PlantableCells.Add(cellCoords);
+                }
 			}
 		}
 	}

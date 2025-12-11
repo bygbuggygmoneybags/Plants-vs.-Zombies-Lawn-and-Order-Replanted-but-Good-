@@ -9,19 +9,18 @@ using Godot;
 
 namespace pvzlawnandorder
 {
-    public abstract partial class Plant : Node2D
+    public abstract partial class Plant : Area2D
     {
-        protected AnimationPlayer animPlay;
         public PackedScene Self { get; set; }
         protected Node2D Game { get; set; }
         protected PackedScene MainScene { get; set; }
-        protected GameManager GameScript { get; set; }
-        protected int Health {  get; set; }
+        public GameManager GameScript { get; set; }
+        public int Health { get; set; }
         protected int MaxHealth { get; set; }
         public int SunCost { get; set; }
         public string PlantType { get; set; }
         protected int Damage { get; set; }
-        protected int Lane { get; set; }
+        public int Lane { get; set; }
         protected float Cooldown { get; set; }
         protected float timer = 0f;
         protected Node MainInstance { get; set; }
@@ -39,22 +38,9 @@ namespace pvzlawnandorder
             }
         }
 
-        public override void _Process(double time)
-        {
-            timer += (float)time;
-
-            if (CanAttack)
-            {
-                timer = 0f;
-            }
-        }
-
         public void OnPlant()
         {
-            Lane = (int)Position.Y;
-
-            animPlay.Play("Spawn");
-            animPlay.Queue("Idle");
+            GameScript.AddPlant(this);
         }
 
         public void PowerUp(string powerUp)
@@ -96,13 +82,8 @@ namespace pvzlawnandorder
 
         protected void Die()
         {
-            animPlay.Play("Death");
+            GameScript.RemovePlant(this);
             QueueFree();
-        }
-
-        public override void _Ready()
-        {
-            animPlay = GetNode<AnimationPlayer>("AnimationPlayer");
         }
     }
 }
