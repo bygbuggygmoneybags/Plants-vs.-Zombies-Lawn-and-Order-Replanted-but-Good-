@@ -8,7 +8,7 @@ using pvzlawnandorder;
 
 		public override void _Ready()
 		{
-			_gameManager = GetNode<GameManager>("/root/GameManager");  
+			_gameManager = GetNode<GameManager>("../GameManager");  
 
 			if (_gameManager?.Sun == null)
 			{
@@ -28,7 +28,7 @@ using pvzlawnandorder;
 		{
 			if (_gameManager != null)
 			{
-				Text = $"Score: {_gameManager.score}";
+				Text = $"Sun: {_gameManager.score}";
 			}
 		}
 	}
