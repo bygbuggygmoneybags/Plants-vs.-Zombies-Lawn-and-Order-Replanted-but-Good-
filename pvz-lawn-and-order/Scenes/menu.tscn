@@ -167,32 +167,5 @@ grow_vertical = 0
 texture_normal = SubResource("GradientTexture1D_wwsa2")
 stretch_mode = 0
 
-<<<<<<< HEAD
-[node name="error" type="Popup" parent="Camera2D"]
-oversampling_override = 1.0
-title = "Not Implemented"
-
-[node name="MenuBar" type="MenuBar" parent="Camera2D"]
-visible = false
-offset_left = -311.0
-offset_top = -206.0
-offset_right = 285.0
-offset_bottom = 251.0
-
-[node name="Music" type="PopupMenu" parent="Camera2D/MenuBar"]
-
-[node name="Sound" type="PopupMenu" parent="Camera2D/MenuBar"]
-
-[node name="3d Acceleration" type="PopupMenu" parent="Camera2D/MenuBar"]
-
-[node name="Fullscreen" type="PopupMenu" parent="Camera2D/MenuBar"]
-oversampling_override = 1.0
-
-[node name="Back" type="Button" parent="Camera2D/MenuBar"]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-=======
 [connection signal="pressed" from="MainMenu/OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="gui_input" from="MainMenu/GridContainer/MenuBar" to="MainMenu/OptionsButton" method="_on_menu_bar_gui_input"]
->>>>>>> 1190d3515dd1d634e17484b5f1a55bbc0d19c23b
