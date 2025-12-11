@@ -11,7 +11,7 @@ namespace pvzlawnandorder
 		[Export] public PackedScene PlantFood { get; set; }
 		private Timer foodTime;
 		private Timer sunTime;
-		int score = 0;
+		[Export] public int score = 0;
 		Node sun;
 
 
@@ -36,10 +36,16 @@ namespace pvzlawnandorder
 
 		private void SpawnSky()
 		{
-			sun = Sun.Instantiate();
-			GetTree().CurrentScene.AddChild(sun);
+			var newSun = Sun.Instantiate();
+			GetTree().CurrentScene.AddChild(newSun);
 
-			sun.Call("init_sky");
+			newSun.Call("init_sky");
+
+			newSun.Connect("score_changed", Callable.From<int>((sunScore) =>
+			{
+	   			score += 25;   // This updates the public Score
+				GD.Print("Sun collected! Total score: ", score);
+			}));
 		}
 
 		private void OnTimeout()
