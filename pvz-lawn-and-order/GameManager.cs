@@ -11,6 +11,7 @@ namespace pvzlawnandorder
 		[Export] public PackedScene PlantFood { get; set; }
 		private Timer foodTime;
 		private Timer sunTime;
+		private Timer downTime;
 		[Export] public int score = 50;
 		Node sun;
 
@@ -21,6 +22,10 @@ namespace pvzlawnandorder
 			sunTime.Timeout += SpawnSky;
 			foodTime = GetNode<Timer>("FoodTimer");
 			foodTime.Timeout += OnTimeout;
+			downTime = GetNode<Timer>("DownTimer");
+			downTime.Timeout += ChooseRandomZombie;
+			
+			
 			for (int i = 0; i < 5; i++)
 			{
 				ZombiesInLane.Add(new List<Zombie>());
@@ -69,6 +74,23 @@ namespace pvzlawnandorder
 		public void RemoveZombie(Zombie zomb)
 		{
 			ZombiesInLane[zomb.Lane].Remove(zomb);
+		}
+		
+		public void ChooseRandomZombie()
+		{
+			Random rand = new Random();
+			int randomZom = rand.Next(3);
+			randomZom = 0;
+			
+			if(randomZom == 0)
+			{
+				AddZombie(new Buckethead());
+			}else if (randomZom == 2)
+			{
+				AddZombie(new Conehead());
+			}else {
+				AddZombie(new Imp());
+			}
 		}
 	}
 }
