@@ -17,11 +17,11 @@ PlantFood = ExtResource("3_u7krg")
 wait_time = 120.0
 
 [node name="SunTimer" type="Timer" parent="Node2D"]
-wait_time = 20.0
+wait_time = 1.091
 autostart = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(288, 141)
+position = Vector2(287, 141)
 offset = Vector2(32, 0)
 zoom = Vector2(1.8, 1.8)
 
