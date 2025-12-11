@@ -42,7 +42,7 @@ namespace pvzlawnandorder.Plants
                         projectile.Speed = speed;
                     }
 
-                    GetTree().CurrentScene.AddChild(cabbage);
+                    GetParent().AddChild(cabbage);
                 }
             }
         }
@@ -66,7 +66,7 @@ namespace pvzlawnandorder.Plants
         {
             base._Process(delta);
 
-            ZombieInLane = GameScript.ZombiesInLane[Lane].Any(z => z.GlobalPosition.X > GlobalPosition.X);
+            ZombieInLane = GameScript.ZombiesInLane[Lane].Any(z => z.Position.X > Position.X);
         }
     }
 }

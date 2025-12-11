@@ -6,7 +6,7 @@ namespace pvzlawnandorder
 {
 	public partial class Tiles : TileMapLayer
 	{
-		[Export] private int tileSourceId = 0;
+		[Export] private int tileSourceId;
 		[Export] private Vector2I tileAtlasCoords = new Vector2I(0,0);
 		[Export] private int gridWidth = 9;
 		[Export] private int gridHeight = 5;
@@ -16,7 +16,7 @@ namespace pvzlawnandorder
 
 		
 
-		private const int TileSourceID = -1;
+		private const int MyTileSourceID = -1;
 		private static readonly Vector2I MyTileAtlasCoords = new Vector2I(0,0);
 
 
@@ -49,8 +49,9 @@ namespace pvzlawnandorder
 			{
 				for (int y = 0; y < gridHeight; y++)
 				{
-					Vector2I cellCoords = new Vector2I(x, y);
-					SetCell(cellCoords, tileSourceId, tileAtlasCoords);
+                    Vector2I cellCoords = new Vector2I(x, y);
+                    tileAtlasCoords = (x + y) % 2 == 0 ? new Vector2I(0, 0) : new Vector2I(1, 0);
+                    SetCell(cellCoords, tileSourceId, tileAtlasCoords);
 					TileData tileData = GetCellTileData(cellCoords);
 					if (tileData != null)
 					{

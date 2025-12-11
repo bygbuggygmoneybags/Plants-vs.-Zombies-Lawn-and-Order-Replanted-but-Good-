@@ -9,6 +9,5 @@ script = ExtResource("1_naa30")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(591, 375)
-scale = Vector2(6.125, 5.84375)
+scale = Vector2(1, 0.954)
 texture = ExtResource("2_seukc")

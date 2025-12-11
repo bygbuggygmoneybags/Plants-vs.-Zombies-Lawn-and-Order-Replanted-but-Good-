@@ -28,8 +28,6 @@ namespace pvzlawnandorder.Plants
                     animPlay?.Play("Attack");
                     Node2D rePea = RePeaProj.Instantiate<Node2D>();
 
-                    rePea.GlobalPosition = Location;
-
                     if (rePea is Projectiles projectile)
                     {
                         projectile.Damage = Damage;
@@ -39,7 +37,7 @@ namespace pvzlawnandorder.Plants
                         projectile.Direction = Vector2.Right;
                     }
 
-                    GetTree().CurrentScene.AddChild(rePea);
+                    GetParent().AddChild(rePea);
                 }
             }
         }
@@ -64,7 +62,7 @@ namespace pvzlawnandorder.Plants
         {
             base._Process(delta);
 
-            ZombieInLane = GameScript.ZombiesInLane[Lane].Any(z => z.GlobalPosition.X > GlobalPosition.X);
+            ZombieInLane = GameScript.ZombiesInLane[Lane].Any(z => z.Position.X > Position.X);
         }
     }
 }

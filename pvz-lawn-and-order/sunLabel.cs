@@ -8,7 +8,7 @@ using pvzlawnandorder;
 
 		public override void _Ready()
 		{
-			_gameManager = GetNode<GameManager>("../GameManager");  
+			_gameManager = GetNode<GameManager>("..");  
 
 			if (_gameManager?.Sun == null)
 			{

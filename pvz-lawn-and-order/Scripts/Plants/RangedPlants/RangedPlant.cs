@@ -12,13 +12,11 @@ namespace pvzlawnandorder
     {
         public override void _Process(double delta){
 
-            base._Process(delta);
+            timer += (float)delta;
 
-            timer -= (float)delta;
-
-            if (timer <= Cooldown && ZombieInLane){
+            if (CanAttack && ZombieInLane){
                 RangedAttack(NumProjectiles, SpreadAngle, ProjectileSpeed, PierceCount, IgnoreObstacles, ZombieInLane);
-                timer = Cooldown;
+                timer = 0f;
             }
         }
 

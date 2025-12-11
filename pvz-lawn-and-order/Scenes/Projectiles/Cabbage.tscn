@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvc365c4svok6"]
+
+[ext_resource type="Script" uid="uid://cqpge5d0vp78s" path="res://Scripts/ArcingProjectiles.cs" id="1_bpvur"]
+[ext_resource type="Texture2D" uid="uid://b4mqa41pchusb" path="res://PNGs/Cabbage.png" id="1_wgjxu"]
+
+[node name="Cabbage" type="Node2D"]
+script = ExtResource("1_bpvur")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_wgjxu")

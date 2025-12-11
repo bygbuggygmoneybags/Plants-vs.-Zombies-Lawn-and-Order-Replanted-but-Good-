@@ -7,6 +7,5 @@
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(751.5, 289.5)
-scale = Vector2(5.140625, 5.328125)
+scale = Vector2(1, 1.036)
 texture = ExtResource("1_sk25r")

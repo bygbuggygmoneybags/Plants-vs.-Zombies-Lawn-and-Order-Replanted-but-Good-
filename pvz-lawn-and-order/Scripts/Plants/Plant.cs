@@ -13,7 +13,6 @@ namespace pvzlawnandorder
     {
         protected AnimationPlayer animPlay;
         public PackedScene Self { get; set; }
-        protected Vector2I Location { get; set; }
         protected Node2D Game { get; set; }
         protected PackedScene MainScene { get; set; }
         protected GameManager GameScript { get; set; }
@@ -50,20 +49,12 @@ namespace pvzlawnandorder
             }
         }
 
-        private void OnSpawnFinish(StringName name)
+        public void OnPlant()
         {
-            if (name == "Spawn")
-            {
-                animPlay.Play("Idle");
-            }    
-        }
+            Lane = (int)Position.Y;
 
-        protected void OnPlant()
-        {
-            Lane = Location.Y;
-
-            animPlay.AnimationFinished += OnSpawnFinish;
             animPlay.Play("Spawn");
+            animPlay.Queue("Idle");
         }
 
         public void PowerUp(string powerUp)
@@ -111,10 +102,6 @@ namespace pvzlawnandorder
 
         public override void _Ready()
         {
-            MainScene = GD.Load<PackedScene>("res://Scenes/node_2d.tscn");
-            MainInstance = MainScene.Instantiate<Node>();
-            AddChild(MainInstance);
-            Game = MainInstance.GetNode<Node2D>("Main Node");
             animPlay = GetNode<AnimationPlayer>("AnimationPlayer");
         }
     }

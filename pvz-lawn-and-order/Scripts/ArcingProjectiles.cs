@@ -45,7 +45,7 @@ namespace pvzlawnandorder.Actors
             Vector2 flat = Start.Lerp(Target, Progress);
             float h = -4 * ArcHeight * Progress * (Progress - 1f);
 
-            GlobalPosition = new Vector2(flat.X, flat.Y - h);
+            Position = new Vector2(flat.X, flat.Y - h);
         }
     }
 }

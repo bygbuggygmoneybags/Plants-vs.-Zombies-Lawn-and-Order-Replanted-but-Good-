@@ -9,6 +9,5 @@ script = ExtResource("1_lwvji")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(664.00006, 329)
-scale = Vector2(5.828125, 5.984375)
+scale = Vector2(1, 1.027)
 texture = ExtResource("2_7ptll")

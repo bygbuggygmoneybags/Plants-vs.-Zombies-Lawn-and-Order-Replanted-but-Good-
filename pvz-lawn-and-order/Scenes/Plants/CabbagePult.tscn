@@ -1,14 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://dhaniu4gjkaw0"]
+[gd_scene load_steps=4 format=3 uid="uid://dhaniu4gjkaw0"]
 
 [ext_resource type="Script" uid="uid://vahna0cjl0cm" path="res://Scripts/Plants/RangedPlants/CabbagePult.cs" id="1_uiacd"]
+[ext_resource type="PackedScene" uid="uid://bvc365c4svok6" path="res://Scenes/Projectiles/Cabbage.tscn" id="2_i4poo"]
 [ext_resource type="Texture2D" uid="uid://b85ttsx105how" path="res://PNGs/CabbagePult.png" id="2_p1tf1"]
 
 [node name="CabbagePult" type="Node2D"]
 script = ExtResource("1_uiacd")
+CabbageProj = ExtResource("2_i4poo")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(623, 316.00003)
-scale = Vector2(5.734375, 5.90625)
+scale = Vector2(1, 1.03)
 texture = ExtResource("2_p1tf1")

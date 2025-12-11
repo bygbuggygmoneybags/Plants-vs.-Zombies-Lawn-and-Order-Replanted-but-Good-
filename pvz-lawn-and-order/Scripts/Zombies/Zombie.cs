@@ -8,10 +8,9 @@ using Godot;
 
 namespace pvzlawnandorder
 {
-	public abstract partial class Zombie : Node2D
+	public partial class Zombie : Node2D
 	{
 		protected AnimationPlayer animPlay;
-		protected Vector2I Location { get; set; }
         protected Node2D Game { get; set; }
         protected PackedScene MainScene { get; set; }
         protected GameManager GameScript { get; set; }
@@ -49,10 +48,6 @@ namespace pvzlawnandorder
 		}
 		public override void _Ready()
 		{
-            MainScene = GD.Load<PackedScene>("res://Scenes/node_2d.tscn");
-            MainInstance = MainScene.Instantiate<Node>();
-            AddChild(MainInstance);
-            Game = MainInstance.GetNode<Node2D>("Main Node");
             animPlay = GetNode<AnimationPlayer>("AnimationPlayer");
 			MaxHealth = 190;
 			Health = MaxHealth;
@@ -83,7 +78,7 @@ namespace pvzlawnandorder
 
 		public void Walk(float timeWalk)
 		{
-			Position += new Vector2(-Speed * timeWalk, 0);
+			Position += Vector2.Left * Speed * timeWalk;
 		}
 
 		private void OnEnterPlantTile(Area2D area)

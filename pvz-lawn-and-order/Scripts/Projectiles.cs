@@ -30,7 +30,7 @@ namespace pvzlawnandorder.Actors
 
         public override void _PhysicsProcess(double delta)
         {
-            GlobalPosition += Direction * Speed * (float)delta;
+            Position += Direction * Speed * (float)delta;
         }
     }
 }
