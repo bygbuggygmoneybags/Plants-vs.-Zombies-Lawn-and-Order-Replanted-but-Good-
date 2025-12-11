@@ -22,7 +22,7 @@ namespace pvzlawnandorder
 		[Export] public PackedScene NormalScene { get; set; }
         private Random rand = new Random();
 
-        private Dictionary<Vector2I, Plant> plantGrid = new();
+		private Dictionary<Vector2I, Plant> plantGrid = new();
 		private Timer foodTime;
 		private Timer sunTime;
 		private Label plantLabel;
@@ -62,7 +62,7 @@ namespace pvzlawnandorder
 
 			plantLabel = GetNode<Label>("SelectLabel");
 
-            for (int i = 0; i < 5; i++)
+			for (int i = 0; i < 5; i++)
 			{ 
 				ZombiesInLane.Add(new List<Zombie>());
 			}
@@ -99,11 +99,11 @@ namespace pvzlawnandorder
 			SpawnPlantFood(new Vector2((float)GD.RandRange(0,8),(float)GD.RandRange(0,4)));
 		}
 
-        public bool IsCellOccupied(Vector2I cell)
-        {
-            return plantGrid.ContainsKey(cell);
-        }
-        
+		public bool IsCellOccupied(Vector2I cell)
+		{
+			return plantGrid.ContainsKey(cell);
+		}
+		
 		private void SpawnPlantFood(Vector2 worldPosition)
 		{
 			Area2D food = (Area2D)PlantFood.Instantiate();
@@ -130,8 +130,8 @@ namespace pvzlawnandorder
 			return cost;
 		}
 
-        public void TryPlacePlant(Vector2I cell)
-        {
+		public void TryPlacePlant(Vector2I cell)
+		{
 			if (score < GetCost(PlantScene))
 			{
 				plantLabel.Visible = true;
@@ -140,15 +140,15 @@ namespace pvzlawnandorder
 				return;
 			}
 
-            if (IsCellOccupied(cell))
-            {
-                plantLabel.Visible = true;
-                plantLabel.Text = "Occupied! Select another cell!";
-                return;
-            }
+			if (IsCellOccupied(cell))
+			{
+				plantLabel.Visible = true;
+				plantLabel.Text = "Occupied! Select another cell!";
+				return;
+			}
 
-            PlacePlant(cell);
-        }
+			PlacePlant(cell);
+		}
 
 		public void SelectPlant(PackedScene scene)
 		{
@@ -163,7 +163,7 @@ namespace pvzlawnandorder
 		public void PlacePlant(Vector2I cell)
 		{
 			Plant plant = PlantScene.Instantiate<Plant>();
-            plantLabel.Visible = true;
+			plantLabel.Visible = true;
 			plantLabel.Text = $"Select a tile to place your {plant.PlantType}";
 
 			Vector2 localPos = tiles.MapToLocal(cell);
@@ -189,9 +189,7 @@ namespace pvzlawnandorder
 			GetParent().AddChild(zomb);
 			zomb.Position = localPos;
 		}
-
-
-        public void Sunflower()
+		public void Sunflower()
 		{
 			SelectPlant(SFlow);
 		}
@@ -199,22 +197,22 @@ namespace pvzlawnandorder
 		public void Peashooter()
 		{
 			SelectPlant(PShooter);
-        }
+		}
 
-        public void Repeater()
+		public void Repeater()
 		{
 			SelectPlant(Repeat);
-        }
+		}
 
-        public void Wallnut()
+		public void Wallnut()
 		{
 			SelectPlant(WNut);
-        }
+		}
 
-        public void CabbagePult()
+		public void CabbagePult()
 		{
 			SelectPlant(CPult);
-        }
+		}
 		
 		public void ChooseRandomZombie()
 		{

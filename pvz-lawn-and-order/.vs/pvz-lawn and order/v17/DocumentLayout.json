@@ -68,7 +68,7 @@
               "RelativeDocumentMoniker": "GameManager.cs",
               "ToolTip": "C:\\Users\\G$$$\\Documents\\pvz-lawn-and-order\\Plants-vs.-Zombies-Lawn-and-Order-Replanted-but-Good-\\pvz-lawn-and-order\\GameManager.cs",
               "RelativeToolTip": "GameManager.cs",
-              "ViewState": "AgIAAGoAAAAAAAAAAAA8wIYAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAwwDEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-05T05:45:05.656Z",
               "IsPinned": true,
@@ -84,8 +84,7 @@
               "RelativeToolTip": "Scripts\\Plants\\PlantFood.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T07:46:28.61Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-11T07:46:28.61Z"
             },
             {
               "$type": "Document",
@@ -97,8 +96,7 @@
               "RelativeToolTip": "Scripts\\Plants\\Sunflower.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T07:48:17.646Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-11T07:48:17.646Z"
             },
             {
               "$type": "Document",
@@ -110,8 +108,7 @@
               "RelativeToolTip": "Scripts\\ArcingProjectiles.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAgwC8AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T07:41:37.175Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-11T07:41:37.175Z"
             },
             {
               "$type": "Document",
@@ -123,8 +120,7 @@
               "RelativeToolTip": "Scripts\\Projectiles.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T07:38:40.176Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-11T07:38:40.176Z"
             },
             {
               "$type": "Document",
@@ -136,8 +132,7 @@
               "RelativeToolTip": "Scripts\\Plants\\Plant.cs",
               "ViewState": "AgIAAB4AAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T07:23:53.778Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-11T07:23:53.778Z"
             },
             {
               "$type": "Document",
@@ -149,8 +144,7 @@
               "RelativeToolTip": "Scripts\\Plants\\RangedPlants\\RangedPlant.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T07:23:18.901Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-11T07:23:18.901Z"
             },
             {
               "$type": "Document",
@@ -162,8 +156,7 @@
               "RelativeToolTip": "Scripts\\Plants\\RangedPlants\\Repeater.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAQwCcAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T07:22:41.449Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-11T07:22:41.449Z"
             },
             {
               "$type": "Document",
@@ -175,8 +168,7 @@
               "RelativeToolTip": "Scripts\\Plants\\RangedPlants\\Peashooter.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAA3wCYAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T06:56:29.723Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-11T06:56:29.723Z"
             },
             {
               "$type": "Document",
@@ -188,8 +180,7 @@
               "RelativeToolTip": "Scripts\\Plants\\RangedPlants\\CabbagePult.cs",
               "ViewState": "AgIAADAAAAAAAAAAAAA+wCwAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T07:23:04.132Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-11T07:23:04.132Z"
             },
             {
               "$type": "Document",
@@ -201,8 +192,7 @@
               "RelativeToolTip": "Scripts\\Zombies\\Zombie.cs",
               "ViewState": "AgIAADAAAAAAAAAAAAAAACgAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T06:59:48.533Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-11T06:59:48.533Z"
             },
             {
               "$type": "Document",
@@ -214,8 +204,7 @@
               "RelativeToolTip": "GenMechanics\\Tiles.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAAwDQAAABhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T05:05:24.356Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-11T05:05:24.356Z"
             }
           ]
         }
