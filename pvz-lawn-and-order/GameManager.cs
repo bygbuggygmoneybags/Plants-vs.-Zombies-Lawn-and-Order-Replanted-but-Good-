@@ -11,7 +11,7 @@ namespace pvzlawnandorder
 		[Export] public PackedScene PlantFood { get; set; }
 		private Timer foodTime;
 		private Timer sunTime;
-		[Export] public int score = 0;
+		[Export] public int score = 50;
 		Node sun;
 
 
