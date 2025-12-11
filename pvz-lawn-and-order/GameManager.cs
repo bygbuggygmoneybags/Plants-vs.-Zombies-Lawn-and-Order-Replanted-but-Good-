@@ -36,12 +36,10 @@ namespace pvzlawnandorder
 
 		private void SpawnSky()
 		{
-			var newSun = Sun.Instantiate();
-			GetTree().CurrentScene.AddChild(newSun);
+			sun = Sun.Instantiate();
+			GetTree().CurrentScene.AddChild(sun);
 
 			sun.Call("init_sky");
-
-			sun = newSun;
 		}
 
 		private void OnTimeout()
